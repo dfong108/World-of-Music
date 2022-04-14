@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Yasgur Dairy Farm",
+        "location": {
+            "country": "United States",
+            "state": "New York",
+            "city": "Bethel"
+        }
+    },
+    {
+        "name": "Alpe D'Huez Mountain Resort",
+        "location": {
+            "country": "Belgium",
+            "state": "Flanders",
+            "city": "Boom"
+        }
+    },
+    {
+        "name": "Empire Polo Club",
+        "location": {
+            "country": "United States",
+            "state": "California",
+            "city": "Indio"
+        }
+    },
+    {
+        "name": "The Orange Stage",
+        "location": {
+            "country": "Denmark",
+            "city": "Roskilde"
+        }
+    },
+    {
+        "name": "Arena of Nimes",
+        "location": {
+            "country": "France",
+            "city": "Nimes"
+        }
+    },
+    {
+        "name": "Red Rocks Ampitheatre",
+        "location": {
+            "country": "United States",
+            "state": "Colorado",
+            "city": "Red Rocks Park"
+        }
+    },
+    {
+        "name": "Dalhalla Ampitheatre",
+        "location": {
+            "country": "Sweden",
+            "city": "Rattvik"
+        }
+    },
+    {
+        "name": "Sydney Opera House",
+        "location": {
+            "country": "Australia",
+            "city": "Sydney"
+        }
+    },
+    {
+        "name": "The Caverns",
+        "location": {
+            "country": "United States",
+            "state": "Tennessee",
+            "city": "Pelham"
+        }
+    },
+    {
+        "name": "Wieliczka Salt Mine",
+        "location": {
+            "country": "Poland",
+            "city": "Krakow"
+        }
+    },
+    {
+        "name": "Jay Pritzker Pavilion",
+        "location": {
+            "country": "United States",
+            "state": "Illinois",
+            "city": "Chicago"
+        }
+    },
+    {
+        "name": "Teatro Antico di Taormina",
+        "location": {
+            "country": "Italy",
+            "city": "Taormina"
+        }
+    }
+]

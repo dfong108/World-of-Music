@@ -1,0 +1,181 @@
+[
+    {
+        "name": "Aerosmith",
+        "origin": {
+                "country": "United States",
+                "state": "Massachussetts",
+                "city": "Boston",
+                "slogan": "The Bay State",
+                "year": 1970
+        },
+        "members": [
+            {
+                "name": "Steven Tyler",
+                "roles": ["lead vocals"]
+            },
+            {
+                "name": "Joe Perry",
+                "roles": ["lead guitar", "backup vocals"]
+            },
+            {
+                "name": "Brad Whitford",
+                "roles": ["rhythm guitar", "songwriter", "composer"]
+            },
+            {
+                "name": "Joey Kramer",
+                "roles": ["drummer"]
+            },
+            {
+                "name": "Tom Hamilton",
+                "roles": ["bassist", "songwriter"]
+            }
+        ],
+        "biography": "Aerosmith is an American rock band formed in boston in 1970.",
+        "songs": ["Sweet Emotion", "Janie's Got a Gun", "Living In An Elevator", "I Don't Want to Miss a Thing", "Dream On", "Crazy", "Dude Looks Like a Lady", "Walk This Way", "Amazing"],
+        "touring": true,
+        "genres": ["hard rock", "blues rock", "rock and roll", "glam metal"],
+        "tags": ["80's", "Rock 'N Roll"]
+    },
+    {
+        "name": "Guns N' Roses",
+        "origin": {
+                "country": "United States",
+                "state": "California",
+                "city": "Los Angeles",
+                "slogan": "The Golden State",
+                "year": 1985
+        },
+        "members": [
+            {
+                "name": "Axl Rose",
+                "roles": ["lead vocals"]
+            },
+            {
+                "name": "Slash",
+                "roles": ["lead guitar"]
+            },
+            {
+                "name": "Izzy Stradlin",
+                "roles": ["rhythm guitar", "songwriter", "backup vocals"]
+            },
+            {
+                "name": "Steven Adler",
+                "roles": ["drummer", "backup vocals"]
+            },
+            {
+                "name": "Duff McKagan",
+                "roles": ["bassist", "songwriter", "backup vocals"]
+            }
+        ],
+        "biography": "Guns N' Roses is an American hard rock band from Los Angeles, California, formed in 1985.",
+        "songs": ["Sweet Child O' Mine", "November Rain", "Knockin' On Heaven's Door", "Patience", "Paradise City", "Estranged", "Welcome To The Jungle", "You Could Be Mine", "Rocket Queen"],
+        "touring": true,
+        "genres": ["hard rock", "rock and roll"],
+        "tags": ["80's", "Rock 'N Roll", "hair band"]
+    },
+    {
+        "name": "AC/DC",
+        "origin": {
+                "country": "Australia",
+                "state": "New South Wales",
+                "city": "Sydney",
+                "slogan": "City of Celebrations",
+                "year": 1973
+        },
+        "members": [
+            {
+                "name": "Brian Johnson",
+                "roles": ["lead vocals"]
+            },
+            {
+                "name": "Angus Young",
+                "roles": ["lead guitar"]
+            },
+            {
+                "name": "Malcolm Young",
+                "roles": ["rhythm guitar", "backup vocals"]
+            },
+            {
+                "name": "Phil Rudd",
+                "roles": ["drummer", "backup vocals"]
+            },
+            {
+                "name": "Cliff Williams",
+                "roles": ["bassist", "songwriter", "backup vocals"]
+            }
+        ],
+        "biography": "AC/DC is an Australian rock band formed in Sydney in the 1973 by Scottish-born brothers, Malcolm and Angus Young.",
+        "songs": ["Thunderstruck", "Highway To Hell", "Back In Black", "You Shook Me All Night Long", "Shoot to Thrill", "Hells Bells", "Whole Lotta Rosie"],
+        "touring": false,
+        "genres": ["hard rock", "rock and roll", "blues rock"],
+        "tags": ["70's", "Rock 'N Roll", "hair band", "Australian"]
+    },
+    {
+        "name": "Weezer",
+        "origin": {
+                "country": "United States",
+                "state": "California",
+                "city": "Los Angeles",
+                "slogan": "The Golden State",
+                "year": 1992
+        },
+        "members": [
+            {
+                "name": "Rivers Cuomo",
+                "roles": ["lead vocals", "keyboard", "songwriter", "producer"]
+            },
+            {
+                "name": "Brian Bell",
+                "roles": ["lead guitar", "backup vocals"]
+            },
+            {
+                "name": "Matt Sharp",
+                "roles": ["rhythm guitar", "backup vocals"]
+            },
+            {
+                "name": "Patrick Wilson",
+                "roles": ["drummer", "backup vocals"]
+            },
+            {
+                "name": "Mikey Welsh",
+                "roles": ["bassist", "backup vocals"]
+            }
+        ],
+        "biography": "Weezer is an American rock band formed in Los Angeles, California, in 1992. They released their self-titled debut album, also known as the Blue Album, in May 1994",
+        "songs": ["Island in the Sun", "Say It Ain't So", "Undone", "Hash Pipe", "Buddy Holly"],
+        "touring": false,
+        "genres": ["alternative rock", "power pop", "pop rock", "pop punk", "rock"],
+        "tags": ["90's", "alternative", "geek", "punk", "rock"]
+    },
+    {
+        "name": "The Beatles",
+        "origin": {
+                "country": "England",
+                "city": "Liverpool",
+                "year": 1960
+        },
+        "members": [
+            {
+                "name": "John Lennon",
+                "roles": ["guitar"]
+            },
+            {
+                "name": "Paul McCartney",
+                "roles": ["bassist", "backup vocals"]
+            },
+            {
+                "name": "George Harrison",
+                "roles": ["guitar", "backup vocals"]
+            },
+            {
+                "name": "Ringo Starr",
+                "roles": ["drummer", "backup vocals"]
+            }
+        ],
+        "biography": "The Beatles were an English rock band, formed in Liverpool in 1960. They are regarded as the most influential band of all time and were integral to the development of 1960s counterculture and popular music's recognition as an art form",
+        "songs": ["Here Comes the Sun", "Let It Be", "Hey Jude", "Don't Let Me Down", "Come Together", "In My Life", "All You Need Is Love"],
+        "touring": false,
+        "genres": ["pop", "beat", "psychedelia"],
+        "tags": ["60's", "British", "forefathers", "pop", "'Ello Gov'na"]
+    }
+]

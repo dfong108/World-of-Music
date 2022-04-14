@@ -1,0 +1,57 @@
+[ 
+    {
+        "title": "Woodstock",
+        "featured_bands": ["AC/DC"],
+        "date": ["1969-08-15"],
+        "location": 
+            {
+                "country": "United States",
+                "state": "New York",
+                "city": "Bethel"
+            },
+        "venue": "Yasgur Dairy Farm",
+        "genres": ["blues rock", "folk rock", "hard rock", "jazz fusion", "latin", "psychedelic", "progressive"],
+        "description": "Woodstock Music and Art Fair, commonly referred to simply as Woodstock, was a musical festival held August 15-18, 1969, on Max Yasgur's dairy farm in Bethel, New York, 40 miles southwest of the town of Woodstock."
+    },
+    {
+        "title": "Tomorrowland",
+        "featured_bands": ["AC/DC", "Rihanna", "Bad Bunny", "Drake", "David Guetta", "Afrojack", "Daft Punk", "Bruno Mars"],
+        "date": ["2022-07-15"],
+        "location": 
+            {
+                "country": "Belgium",
+                "state": "Flanders",
+                "city": "Boom"
+            },
+        "venue": "Alpe D'Huez Mountain Resort",
+        "genres": ["EDM", "psychedelic"],
+        "description": "Tomorrowland is a Beligian electronic dance music festival held in Boom, Flanders, Belgium since 2005. An academic account of the festival and its place in the global culture and business of EDM events was published in 2020"
+    },
+    {
+        "title": "Coachella",
+        "featured_bands": ["Drake,", "Old Kanye", "Common", "Snoop Dogg", "Bruno Mars", "Rihanna", "Daft Punk", "Jay-Z", "Beyonce", "Taylor Swift"],
+        "date": ["2022-04-24"],
+        "location": 
+            {
+                "country": "United States",
+                "state": "California",
+                "city": "Indio"
+            },
+        "venue": "Empire Polo Club",
+        "genres": ["pop", "indie", "hip hop", "EDM"],
+        "description": "The Coachella Valley Music and Arts Festival is an annual music and arts festival held at the Empire Polo Club in Indio, California, in the Coachella Valley in the Colorado Desert. It was co-founded by Paul Tollett and Rick Van Santen in 1999, and is organized by Goldenvoice, a subsidiary of AEG Presents."
+    },
+    {
+        "title": "Roskilde Festival",
+        "featured_bands": ["AC/DC", "Bob Marley", "Metallica", "The Rolling Stones", "Guns N' Roses"],
+        "date": ["2022-07-02"],
+        "location": 
+            {
+                "country": "Denmark",
+                "city": "Roskilde"
+            },
+        "venue": "The Orange Stage",
+        "genres": ["pop", "rock", "electronic", "reggae", "hip hop", "world"],
+        "description": "The Roskilde Festival is a Danish music festival held annually south of Roskilde. It is one of the largest music festivals in Europe and the largest in the Nordics. Created in 1971 by two high school students and a promoter, it is now one of the world's oldest and most notable music festivals."
+    }
+]
