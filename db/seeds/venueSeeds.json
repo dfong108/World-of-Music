@@ -5,6 +5,11 @@
             "country": "United States",
             "state": "New York",
             "city": "Bethel"
+        },
+        "images": {
+            "main": "https://m.media-amazon.com/images/I/91Gk4eJLUxL._AC_SL1500_.jpg",
+            "alt": ["https://i.cbc.ca/1.5245615.1565722610!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_620/woodstock.jpg"
+            ]
         }
     },
     {
@@ -13,6 +18,13 @@
             "country": "Belgium",
             "state": "Flanders",
             "city": "Boom"
+        },
+        "images": {
+            "main": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgPO8sHIvn420RbPd4sD755bQJLWLJa6tGL9UeytbF6wx9xbTkh8DgC2JxgHfk1GpaT_U&usqp=CAU",
+            "alt": ["https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sa6549607c78f5c11/image/i30f56dad2157c561/version/1481722031/image.jpg",
+                "https://q-xx.bstatic.com/xdata/images/hotel/max500/131923476.jpg?k=b66d2196eff816d100dd89b0e33eea89204582e8114c279d172803f174d6eab4&o=",
+                "https://media-cdn.tripadvisor.com/media/photo-s/21/5e/fb/f2/hotel-grandes-rousses.jpg"
+            ]
         }
     },
     {
@@ -21,6 +33,13 @@
             "country": "United States",
             "state": "California",
             "city": "Indio"
+        },
+        "images": {
+            "main": "https://cdn.wallpapersafari.com/66/99/SOGum4.jpg",
+            "alt": ["https://i.insider.com/5cc30a49d4ca4718020209b2?width=700",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAwDf5GtC_IiT8hxYOLQz0CeGGbCUDAPsNOY2niBHd-QJEOhp_5122FG9vPCT4sLjAOQA&usqp=CAU",
+                "https://assets.teenvogue.com/photos/60534c7a0d29504c5c2a4643/16:9/w_2560%2Cc_limit/945956642"
+            ]
         }
     },
     {
@@ -28,6 +47,12 @@
         "location": {
             "country": "Denmark",
             "city": "Roskilde"
+        },
+        "images": {
+            "main": "https://jyllands-posten.dk/redCHWafRZzSTm8lMvVvRyTm6xlgHPPeDrNTeZ9LpK8/plain/https%3A%2F%2Fjyllands-posten.dk%2Fpictures%2FNICA_Billede__free_%2Farticle6852076.ece%2FALTERNATES%2Ff-square%2FOK-Stones",
+            "alt": ["https://api.colourbox.com/publicmedia302/1600px/14599612/media.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLZrQdO2G74pcC3JiFN7yH7H2tJ9tuRxvkNwlf2X6qQ2D6XdGioBTpTiZbn4tkldQwH14&usqp=CAU"
+            ]
         }
     },
     {
@@ -35,6 +60,13 @@
         "location": {
             "country": "France",
             "city": "Nimes"
+        },
+        "images": {
+            "main": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMBCAI9znyVOPGC45D6hp54x5FaUlI3PWoVXxHlXhCkcGoDzk4LIRZ2WXzxWSzeqNYJ-s&usqp=CAU",
+            "alt": ["https://media.resources.festicket.com/image/412x232/smart/filters:quality(70)/www/photos/60629051_2660581467291994_6353803699478855680_n.jpg",
+                "https://bulletindescommunes.net/wp-content/uploads/2017/06/festival-de-n%C3%AEmes.jpg",
+                "https://www.nimes-tourisme.com/images/articles/monuments/arenes-de-nimes/Arenes_de_Nimes_la_nuit_Ph._CP_OTNimes.JPG"
+            ]
         }
     },
     {
@@ -43,6 +75,15 @@
             "country": "United States",
             "state": "Colorado",
             "city": "Red Rocks Park"
+        },
+        "images": {
+            "main": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/aa/59/2c.jpg",
+            "alt": ["https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/denver/13432_RedRocksAmphitheatre_ff373feb-bccc-419e-4cf1a7db1ae3a9f1.jpg",
+                "https://www.billboard.com/wp-content/uploads/2021/04/01-red-rocks-Alive-Coverage-2021-billboard-1548-1619205433.jpg",
+                "https://assets.redrocksonline.com/wp-content/uploads/2019/10/12114819/20140802_rocyoga_148lowres.jpg",
+                "https://edmmaniac.com/wp-content/uploads/2021/01/Steve-Winwood-2014-09-30-01-2282.jpg",
+                "https://redrocks.co/wp-content/uploads/2018/12/redrockssky.jpg"
+            ]
         }
     },
     {
@@ -50,6 +91,13 @@
         "location": {
             "country": "Sweden",
             "city": "Rattvik"
+        },
+        "images": {
+            "main": "https://www.6amgroup.com/wp-content/uploads/2016/06/Into-The-Valley.jpg",
+            "alt": ["https://swedenunderground.com/wp-content/uploads/2016/12/Facilities-Dalhalla-Stage.jpg",
+                "https://bosunrecords.files.wordpress.com/2015/01/dalhalla-1.jpg",
+                "https://lh5.googleusercontent.com/p/AF1QipMwb0T21ZiR_wEBDnjvTUJPkxfZVUQcoFnHJtO3=w500-h500-k-no"
+            ]
         }
     },
     {
@@ -57,6 +105,15 @@
         "location": {
             "country": "Australia",
             "city": "Sydney"
+        },
+        "images": {
+            "main": "https://afar-production.imgix.net/uploads/images/post_images/images/dl7gVL8vDD/original_544020e86d75369e788c7da796c6e96d.jpg?1522170127?ixlib=rails-0.3.0&auto=format%2Ccompress&crop=entropy&fit=crop&h=719&q=80&w=954",
+            "alt": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkOlPAPK7EFOOaziQb2DmozeNkdImo4RTOIg&usqp=CAU",
+                "https://s3.eu-central-1.amazonaws.com/centaur-wp/designweek/prod/content/uploads/2014/04/Number3-1002x659.jpg",
+                "https://www.sydneyoperahouse.com/content/dam/soh/visit-us/performance-spaces/concert-hall/renders/2022/acoustic-mode-house-stalls-lcr.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6jXTRLvp1k_ism6QQOXPHRE7xhibRQEf6y9vojFZo9G8o_lzblgmx5j3vOjvGMlNk0Js&usqp=CAU",
+                "https://www.sydneyoperahouse.com/content/dam/soh/footer/venue-hire/concert-hall/ConcertHall_VenueHire_1600x1067_Daniel-Boud.jpg"
+            ]
         }
     },
     {
@@ -65,6 +122,13 @@
             "country": "United States",
             "state": "Tennessee",
             "city": "Pelham"
+        },
+        "images": {
+            "main": "https://www.nugs.net/on/demandware.static/-/Sites-nugs-master/default/dw98477b5f/images/hi-res/lotu190706_01.jpg",
+            "alt": ["https://media-cdn.tripadvisor.com/media/photo-s/16/b3/b8/9e/bluegrass-underground.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUI-j6WmCH8_C9p9BpgHO3iPijBU6oSEAh-1dw0b8EF9JXHKD4iblbZscBlfTvBBh6LyQ&usqp=CAU",
+                "https://www.gannett-cdn.com/-mm-/4aaf1cf0773fb0918fd29b618f5d8e75dbbc12b0/c=168-0-2831-1997/local/-/media/Nashville/2015/03/24/B9316676458Z.1_20150324152731_000_G30AAHUHP.1-0.jpg?quality=50&width=640"
+            ]
         }
     },
     {
@@ -72,6 +136,12 @@
         "location": {
             "country": "Poland",
             "city": "Krakow"
+        },
+        "images": {
+            "main": "https://www.gettingstamped.com/wp-content/uploads/2018/03/Wieliczka-Salt-Mine-Things-to-do-in-Krakow.jpg",
+            "alt": ["https://i.insider.com/5ed0e169f34d0562ea37fa62?width=700",
+                "https://krakow.wiki/wp-content/uploads/2016/11/wieliczka10.jpg"
+            ]
         }
     },
     {
@@ -80,6 +150,12 @@
             "country": "United States",
             "state": "Illinois",
             "city": "Chicago"
+        },
+        "images": {
+            "main": "http://walshwebsiteassets.blob.core.windows.net/sitedocs/images/millenniumparkjaypritzkerpavilion1-8219.jpg",
+            "alt": ["https://images.adsttc.com/media/images/5acd/643e/f197/cc64/f500/0117/large_jpg/IntUseOk_Chicago_8_photoPatrickPyszka.jpg?1523409969",
+                "https://millenniumparkfoundation.org/wp-content/uploads/2018/04/9-The-Jay-Pritzker-Pavilion-at-night_-photo-Patrick-Pyszka.jpg"
+            ]
         }
     },
     {
@@ -87,6 +163,12 @@
         "location": {
             "country": "Italy",
             "city": "Taormina"
+        },
+        "images": {
+            "main": "https://live.staticflickr.com/1931/31336099008_5e8f9287db_b.jpg",
+            "alt": ["https://media.istockphoto.com/photos/teatro-antico-di-taormina-in-sicily-italy-picture-id1139108794?k=20&m=1139108794&s=170667a&w=0&h=P3jdRBN4bCbfouoWZDyDeyo8kpPsAzHfZJd5KjiIRBI=",
+                "https://www.suntripsicily.com/administration/foto/1542279411_taormina-opera_festival_suntripsicily%20(1).jpg"
+            ]
         }
     }
 ]

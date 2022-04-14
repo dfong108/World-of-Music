@@ -12,6 +12,10 @@ const VenueSchema = new mongoose.Schema(
         upcoming_events: {
             title: String,
             date: Date,
+        },
+        images:{
+            main: String,
+            alt: [String]
         }
     }
 )

@@ -34,7 +34,14 @@
         "songs": ["Sweet Emotion", "Janie's Got a Gun", "Living In An Elevator", "I Don't Want to Miss a Thing", "Dream On", "Crazy", "Dude Looks Like a Lady", "Walk This Way", "Amazing"],
         "touring": true,
         "genres": ["hard rock", "blues rock", "rock and roll", "glam metal"],
-        "tags": ["80's", "Rock 'N Roll"]
+        "tags": ["80's", "Rock 'N Roll"],
+        "images":{
+            "main": "https://i.pinimg.com/originals/36/5f/7c/365f7c1692294f3c1cd7599bcb34b06e.jpg",
+            "alt": ["https://wallpaperaccess.com/full/1413395.jpg",
+                "https://wallpaperaccess.com/full/1413398.jpg",
+                "https://wallup.net/wp-content/uploads/2016/01/15110-Aerosmith.jpg"
+            ]
+        }
     },
     {
         "name": "Guns N' Roses",
@@ -71,7 +78,13 @@
         "songs": ["Sweet Child O' Mine", "November Rain", "Knockin' On Heaven's Door", "Patience", "Paradise City", "Estranged", "Welcome To The Jungle", "You Could Be Mine", "Rocket Queen"],
         "touring": true,
         "genres": ["hard rock", "rock and roll"],
-        "tags": ["80's", "Rock 'N Roll", "hair band"]
+        "tags": ["80's", "Rock 'N Roll", "hair band"],
+        "images": {
+            "main":"https://wallpaperaccess.com/full/1413215.jpg",
+            "alt": ["https://louderthanwar.com/wp-content/uploads/2015/12/guns-n-roses.jpg",
+                "https://www.mordeo.org/download/20350/"
+            ]
+        }
     },
     {
         "name": "AC/DC",
@@ -108,7 +121,13 @@
         "songs": ["Thunderstruck", "Highway To Hell", "Back In Black", "You Shook Me All Night Long", "Shoot to Thrill", "Hells Bells", "Whole Lotta Rosie"],
         "touring": false,
         "genres": ["hard rock", "rock and roll", "blues rock"],
-        "tags": ["70's", "Rock 'N Roll", "hair band", "Australian"]
+        "tags": ["70's", "Rock 'N Roll", "hair band", "Australian"],
+        "images": {
+            "main":"https://cdn.europosters.eu/image/750/posters/ac-dc-highway-to-hell-i28834.jpg",
+            "alt": ["https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/642c27c2-0abb-4c2e-948e-97a608b3ec57/d1px8wl-cfbbdf27-953e-4b94-ac34-412ce1d4528b.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY0MmMyN2MyLTBhYmItNGMyZS05NDhlLTk3YTYwOGIzZWM1N1wvZDFweDh3bC1jZmJiZGYyNy05NTNlLTRiOTQtYWMzNC00MTJjZTFkNDUyOGIuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.TkMB7G0Of8J268YlU0JtkRG7ha-6b5M5_rHhj-Rp9KM",
+                "https://images2.alphacoders.com/179/thumb-1920-179890.jpg"
+            ]
+        }
     },
     {
         "name": "Weezer",
@@ -145,7 +164,15 @@
         "songs": ["Island in the Sun", "Say It Ain't So", "Undone", "Hash Pipe", "Buddy Holly"],
         "touring": false,
         "genres": ["alternative rock", "power pop", "pop rock", "pop punk", "rock"],
-        "tags": ["90's", "alternative", "geek", "punk", "rock"]
+        "tags": ["90's", "alternative", "geek", "punk", "rock"],
+        "images": {
+            "main": "https://wallpapercave.com/wp/wp2039380.jpg",
+            "alt": ["https://i.pinimg.com/originals/91/9e/72/919e72b830bec82f940b17ae67ed8f4b.jpg",
+                "https://www.teahub.io/photos/full/125-1253018_weezer-raditude.jpg",
+                "https://c4.wallpaperflare.com/wallpaper/936/520/56/music-weezer-wallpaper-preview.jpg"
+
+            ]
+        }
     },
     {
         "name": "The Beatles",
@@ -176,6 +203,15 @@
         "songs": ["Here Comes the Sun", "Let It Be", "Hey Jude", "Don't Let Me Down", "Come Together", "In My Life", "All You Need Is Love"],
         "touring": false,
         "genres": ["pop", "beat", "psychedelia"],
-        "tags": ["60's", "British", "forefathers", "pop", "'Ello Gov'na"]
+        "tags": ["60's", "British", "forefathers", "pop", "'Ello Gov'na"],
+        "images": {
+            "main": "",
+            "alt": ["https://live.staticflickr.com/3444/3729414006_4a6a694dd3_b.jpg",
+                "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1ee4ec09-81e0-44f9-8e8c-a6d322106f32/d4kcwz7-71de7c66-178e-4734-b7ce-1d5182fb105e.jpg/v1/fill/w_900,h_563,q_75,strp/the_beatles_wallpaper_by_warlock1291_d4kcwz7-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTYzIiwicGF0aCI6IlwvZlwvMWVlNGVjMDktODFlMC00NGY5LThlOGMtYTZkMzIyMTA2ZjMyXC9kNGtjd3o3LTcxZGU3YzY2LTE3OGUtNDczNC1iN2NlLTFkNTE4MmZiMTA1ZS5qcGciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.sDWw63XdaYYmk0IbaonTdi0c_JR6789ue6T5ZZI-1G4",
+                "https://wallpapercave.com/wp/wp2650263.jpg",
+                "https://live.staticflickr.com/2636/3728611825_2d4265e027_b.jpg",
+                "https://cutewallpaper.org/26/beatles-blue-wallpaper/beatles-c0f7f-wallpaper-1ab3e-rbeatles.png"
+            ]
+        }
     }
 ]

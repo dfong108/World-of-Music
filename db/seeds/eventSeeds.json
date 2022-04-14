@@ -1,6 +1,6 @@
 [ 
     {
-        "title": "Woodstock",
+        "name": "Woodstock",
         "featured_bands": ["AC/DC"],
         "date": ["1969-08-15"],
         "location": 
@@ -11,10 +11,17 @@
             },
         "venue": "Yasgur Dairy Farm",
         "genres": ["blues rock", "folk rock", "hard rock", "jazz fusion", "latin", "psychedelic", "progressive"],
-        "description": "Woodstock Music and Art Fair, commonly referred to simply as Woodstock, was a musical festival held August 15-18, 1969, on Max Yasgur's dairy farm in Bethel, New York, 40 miles southwest of the town of Woodstock."
+        "description": "Woodstock Music and Art Fair, commonly referred to simply as Woodstock, was a musical festival held August 15-18, 1969, on Max Yasgur's dairy farm in Bethel, New York, 40 miles southwest of the town of Woodstock.",
+        "images": {
+            "main": "https://wallpapercave.com/wp/wp1944467.jpg",
+            "alt": ["https://i.pinimg.com/originals/72/31/54/723154be6060136d6a455577d5bdb9a0.jpg",
+                "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/36e6ba04-22c8-49e1-9403-9d4790ca5c57/d5rsbhy-eaf0fdeb-ad54-44bc-bfb9-8b706464877a.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzM2ZTZiYTA0LTIyYzgtNDllMS05NDAzLTlkNDc5MGNhNWM1N1wvZDVyc2JoeS1lYWYwZmRlYi1hZDU0LTQ0YmMtYmZiOS04YjcwNjQ2NDg3N2EuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dviRICsstxqshMp1M4CTwm_y0cYjVQlKcdQSc0gRmVU",
+                "https://www.whatcomtalk.com/wp-content/uploads/2019/08/Woodstock-50-Years-Later-Poster.jpg"
+            ]
+        }
     },
     {
-        "title": "Tomorrowland",
+        "name": "Tomorrowland",
         "featured_bands": ["AC/DC", "Rihanna", "Bad Bunny", "Drake", "David Guetta", "Afrojack", "Daft Punk", "Bruno Mars"],
         "date": ["2022-07-15"],
         "location": 
@@ -25,10 +32,17 @@
             },
         "venue": "Alpe D'Huez Mountain Resort",
         "genres": ["EDM", "psychedelic"],
-        "description": "Tomorrowland is a Beligian electronic dance music festival held in Boom, Flanders, Belgium since 2005. An academic account of the festival and its place in the global culture and business of EDM events was published in 2020"
+        "description": "Tomorrowland is a Beligian electronic dance music festival held in Boom, Flanders, Belgium since 2005. An academic account of the festival and its place in the global culture and business of EDM events was published in 2020",
+        "images": {
+            "main": "https://edm.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTc0MjYzODMyMzQyOTY0MDky/1-3.jpg",
+            "alt": ["https://djmag.com/sites/default/files/article/image/2018-1_1.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/8/82/Tomorrowland-2017-2.jpg",
+                "https://i.hurimg.com/i/hdn/75/0x0/5ed9ece8c9de3d2890d3a93f.jpg"
+            ]
+        }
     },
     {
-        "title": "Coachella",
+        "name": "Coachella",
         "featured_bands": ["Drake,", "Old Kanye", "Common", "Snoop Dogg", "Bruno Mars", "Rihanna", "Daft Punk", "Jay-Z", "Beyonce", "Taylor Swift"],
         "date": ["2022-04-24"],
         "location": 
@@ -39,10 +53,21 @@
             },
         "venue": "Empire Polo Club",
         "genres": ["pop", "indie", "hip hop", "EDM"],
-        "description": "The Coachella Valley Music and Arts Festival is an annual music and arts festival held at the Empire Polo Club in Indio, California, in the Coachella Valley in the Colorado Desert. It was co-founded by Paul Tollett and Rick Van Santen in 1999, and is organized by Goldenvoice, a subsidiary of AEG Presents."
+        "description": "The Coachella Valley Music and Arts Festival is an annual music and arts festival held at the Empire Polo Club in Indio, California, in the Coachella Valley in the Colorado Desert. It was co-founded by Paul Tollett and Rick Van Santen in 1999, and is organized by Goldenvoice, a subsidiary of AEG Presents.",
+        "images": {
+            "main": "http://cdn.shopify.com/s/files/1/1129/7766/articles/coachella-2019-emek-gig-poster_grande.jpg?v=1557186128",
+            "alt": ["https://cdn.shopify.com/s/files/1/0920/4880/products/DSC03002_480x.jpg?v=1571270251",
+                "http://nakatomiinc.nakatomi.net/wp-content/uploads/sites/3/2015/04/coachella2015-700x934.jpg",
+                "https://i.pinimg.com/originals/0c/7c/1a/0c7c1ad630fb87dec49cddcdc4b9c0e8.jpg",
+                "http://nakatomiinc.nakatomi.net/wp-content/uploads/sites/3/2017/04/COACHELLA-2017-WEB-700x934.jpg",
+                "http://images-cdn.auctionmobility.com/is3/auctionmobility-static/4QIs-1-5VHS1/1-LI4GV/07a5d968-a4df-413f-a674-b378b3cf3816",
+                "https://cdn.shopify.com/s/files/1/0727/6555/products/coach11cream_web.jpeg?v=1562946329",
+                "https://postercabaret.com/wp-content/uploads/2019/07/products-tim_coachella2018night.jpg"
+            ]
+        }
     },
     {
-        "title": "Roskilde Festival",
+        "name": "Roskilde Festival",
         "featured_bands": ["AC/DC", "Bob Marley", "Metallica", "The Rolling Stones", "Guns N' Roses"],
         "date": ["2022-07-02"],
         "location": 
@@ -52,6 +77,13 @@
             },
         "venue": "The Orange Stage",
         "genres": ["pop", "rock", "electronic", "reggae", "hip hop", "world"],
-        "description": "The Roskilde Festival is a Danish music festival held annually south of Roskilde. It is one of the largest music festivals in Europe and the largest in the Nordics. Created in 1971 by two high school students and a promoter, it is now one of the world's oldest and most notable music festivals."
+        "description": "The Roskilde Festival is a Danish music festival held annually south of Roskilde. It is one of the largest music festivals in Europe and the largest in the Nordics. Created in 1971 by two high school students and a promoter, it is now one of the world's oldest and most notable music festivals.",
+        "images": {
+            "main": "http://heretoday.dk/blog/wp-content/files/2014/07/Rolling_Stones-9752-950x633.jpg",
+            "alt": ["https://theculturetrip.com/wp-content/uploads/2018/06/orange-simon-frsig-christensen-38-1200px.jpg",
+                "https://flemmingbojensen.com/wp-content/uploads/2018/07/FlemmingBoJensen-blog-RF18-6191.jpg",
+                "https://cdn.theculturetrip.com/wp-content/uploads/2018/06/simon-frsig-christensen-40-1200px.jpg"
+            ]
+        }
     }
 ]

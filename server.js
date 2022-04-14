@@ -21,11 +21,11 @@ app.use('/venues', venueRouter);
 
 
 app.get('/', (req, res) => {
-    res.send('home page')
+    res.send('World of Music App')
 })
 
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    console.log(`--- Music Schedule App running on ${port} ---`)
+    console.log(`--- World of Music App running on ${port} ---`)
 })

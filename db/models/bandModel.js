@@ -4,7 +4,10 @@ const mongoose = require('../connection');
 
 const BandSchema = new mongoose.Schema(
     {
-        name: {type: String, unique: true},
+        name: {
+            type: String, 
+            unique: true
+        },
         origin: {
             country: String,
             state: String,
@@ -23,6 +26,10 @@ const BandSchema = new mongoose.Schema(
         touring: Boolean,
         genres: [String],
         tags: [String],
+        images:{
+            main: String,
+            alt: [String]
+        }
         // venues_played: [VenuesSchema],
         // scheduled_events: [EventSchema],
     }

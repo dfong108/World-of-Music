@@ -2,7 +2,7 @@ const mongoose = require('../connection');
 
 const EventSchema = new mongoose.Schema(
     {
-        title: {type: String, unique: true},
+        name: String,
         featured_bands: [String],
         date: Date,
         location: {
@@ -14,6 +14,10 @@ const EventSchema = new mongoose.Schema(
         venue: String,
         genres: [String],
         description: String,
+        images:{
+            main: String,
+            alt: [String]
+        }
     }
 )
 
