@@ -1,0 +1,76 @@
+<h2>EDIT <%= name %></h2>
+
+<form action="/bands/<%= _id %>/?_method=put" method="POST">
+    <!-- Band Name -->
+    <div class="edit-name form-group form-section">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+    </div>
+
+    <!-- ORIGIN -->
+    <div class="edit-location form-group form-section">
+        <span class="form-section-title">Origin</span>
+
+        <label for="orgin.country">Country</label>
+        <input type="text" id="origin-country" name="origin.country" class="form-text-input">
+
+        <label for="orgin.state">State</label>
+        <input type="text" id="origin-state" name="origin.state" class="form-text-input">
+
+        <label for="orgin.city">City</label>
+        <input type="text" id="origin-city" name="origin.city" class="form-text-input">
+    </div>
+
+    <!-- MEMBERS (array) -->
+    <!-- <div class="edit-members form-group form-section">
+        <span>Members</span>
+        <label for="members.name">Name</label>
+        <input type="text" name="members.name">
+
+        <label for="members.roles[0]">Roles</label>
+        <input type="select" name="members.roles[0]" multiple list="roles">
+        <datalist id="roles">
+            <option>vocals</option>
+            <option>rhythm guitar</option>
+            <option>bass guitar</option>
+            <option>drums</option>
+            <option>percussion</option>
+        </datalist>
+    </div> -->
+
+    <!-- BIOGRAPHY -->
+    <div class="edit-description form-group form-section">
+        <label for="biography">Bio:</label>
+        <textarea type="text" id="biography"></textarea>
+    </div>
+    <!-- SONGS (array) -->
+    <div class="edit-songs form-group form-section">
+
+    </div>
+    <!-- TOURING (boolean) -->
+    <div class="edit-touring form-group form-section">
+        <label for="touring">Touring</label>
+        
+        <span>yes</span>
+        <input type="radio" name="touring" value="true">
+        <span>no</span>
+        <input type="radio" name="touring" value="false">
+    </div>
+    <!-- GENRES (array) -->
+    <div class="edit-genres form-group form-section">
+
+    </div>
+    <!-- TAGS (array) -->
+    <div class="edit-tags form-group form-section">
+
+    </div>
+    <!-- Images -->
+    <div class="edit-images form-group form-section">
+
+    </div>
+
+
+    <input type="submit" class="btn btn-primary"/>
+    <a href="/bands" class="btn btn-secondary">Cancel</a>
+
+</form>

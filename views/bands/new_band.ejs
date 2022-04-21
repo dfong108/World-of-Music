@@ -1,0 +1,70 @@
+<header>
+    <h3 class="page_title font">Bands</h3>
+    <div class="header_btn_container">
+        <a href="/events" class="btn header_btn">Events</a>
+        <a href="/venues" class="btn header_btn">Venues</a>
+        <a href="/bands/new" class="btn header_btn">Add New Band</a>
+    </div>
+</header>
+
+<form action="/bands" method="POST">
+    <!-- Band Name -->
+    <div class="form-group">
+        <label for="name">Band Name:</label>
+        <input type="text" id="band_name" name="name" class="form-control"/>
+    </div>
+    <!-- Origin -->
+    <div>
+        <span>Origins</span>
+        <label for="origin.country">Country</label>
+        <input type="text" id="country" name="origin.country" class="form-content">
+        <label for="origin.state">State</label>
+        <input type="text" id="state" name="origin.state" class="form-content">
+        <label for="origin.city">City</label>
+        <input type="text" id="city" name="origin.city" class="form-content">
+    </div>
+    <!-- Members (array) -->
+    <!-- <div>
+        <span>Members</span>
+        <label for="members[0].name">Name</label>
+        <input type="text" id="members.name" name="members[0].name" class="form-content">
+        <label for="members[0].roles">roles</label>
+        <input type="text" id="members.roles" name="members[0].roles" class="form-content">
+    </div> -->
+    <!-- Biography -->
+    <div class="form-group">
+        <label for="biography">Bio:</label>
+        <textarea type="text" id="biography" name="biography"
+            placeholder="Tell us about the band!">
+        </textarea>
+    </div>
+    <!-- Songs (array) -->
+    <div class="songs form-group">
+        <label for="songs">Songs</label>
+        <input type="text" id="songs" name="songs" class="form-content">
+    </div>
+    <!-- Touring (boolean) -->
+    <div class="touring form-group">
+        <span>Touring</span>
+        <label for="touring">Yes</label>
+        <input type="radio" id="yes" name="touring" value="true">
+        <label for="touring">No</label>
+        <input type="radio" id="no" name="touring" value="false">
+    </div>
+    <!-- Genres (array) -->
+    <div class="genres form-group">
+        <label for="genres">New Genre</label>
+        <input type="text" name="genres" class="form-content">
+    </div>
+    <!-- Tags (array) -->
+    <div class="tags form-group">
+        <label for="tags">New Tag</label>
+        <input type="text" name="tags" class="form-content">
+    </div>
+    <!-- Images -->
+
+
+    <input type="submit" class="btn btn-primary"/>
+    <a href="/bands" class="btn btn-secondary">Cancel</a>
+
+</form>

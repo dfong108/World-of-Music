@@ -1,26 +1,28 @@
 const mongoose = require('../connection');
 // const VenuesSchema = require('./venueModel').schema;
 // const EventSchema = require('./eventModel').schema
-
+const MembersSchema = new mongoose.Schema(
+    {
+        name: String,
+        roles: [String]
+    }
+)
+const OriginSchema = new mongoose.Schema(
+    {
+        country: String,
+        state: String,
+        city: String,
+        slogan: String,
+    }
+)
 const BandSchema = new mongoose.Schema(
     {
         name: {
             type: String, 
             unique: true
         },
-        origin: {
-            country: String,
-            state: String,
-            city: String,
-            slogan: String,
-            year: Number,
-        },
-        members: [
-            {
-                name: String,
-                roles: [String]
-            }
-        ],
+        origin: OriginSchema,
+        members: [MembersSchema],
         biography: String,
         songs: [String],
         touring: Boolean,

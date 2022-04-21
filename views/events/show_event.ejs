@@ -1,0 +1,63 @@
+<header>
+    <h3 class="page_title font">Events</h3>
+    <div class="header_btn_container">
+        <a href="/events" class="btn header_btn">Events</a>
+        <a href="/bands" class="btn header_btn">Bands</a>
+        <a href="/venues" class="btn header_btn">Venues</a>
+        <a href="/events/new" class="btn header_btn">Add New Event</a>
+    </div>
+</header>
+
+<h3 class="show show-title"><%= event.name %> </h3>
+
+<div class="show-section-container">
+
+    <!-- MAIN IMAGE -->
+        <div class="show show-section main-image-section">
+            <% if(event.images.main) { %> 
+                <img src="<%= event.images.main %> " alt="a picture about <%= event.name %> ">
+            <% } else if(! event.images.main && event.images.alt[0]) { %> 
+                <img src="<%= event.images.alt[0] %> " alt="a picture about <%= event.name %> ">
+            <% } else { %>
+                <img src="/assets/livemusic.jpeg" alt="a picture about live music ">
+            <% } %> 
+        </div>
+
+    <!-- LOCATION -->
+        <div class="show-section location-section">
+            <% if(event.location.city) { %> 
+                <span> <%= event.location.city %>, </span>
+            <% } %> 
+            <% if(event.location.state) { %> 
+                <span> <%= event.location.state %> </span>
+            <% } %> 
+            <% if(event.location.country) { %> 
+                <span><%= event.location.country %></span>
+            <% } %> 
+        </div>
+
+    <!-- DATE -->
+        <div class="show-section date-section">
+            <%= event.date %> 
+        </div>
+
+    <!-- FEATURED BANDS -->
+        <div class="show-section featured-bands-section">
+            <ul>
+                <% for(let i = 0; i < event.featured_bands.length; i++) { %>
+                    <li><%= event.featured_bands[i] %></li>
+                <% } %>
+            </ul>
+        </div>
+    <!--  -->
+    <!-- ALT IMAGES -->    
+        <div class="show show-section more-images-section">
+            <% for(let i = 0; i < event.images.alt.length; i++) { %> 
+                <div class="alt-img">
+                    <img src="<%= event.images.alt[i] %>" alt="a picture of <%= event.name %> "/>
+                </div>
+            <% } %> 
+        </div>
+
+
+</div>

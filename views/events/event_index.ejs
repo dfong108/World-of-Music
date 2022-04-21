@@ -1,0 +1,41 @@
+<header>
+    <h3 class="page_title font">Events</h3>
+    <div class="header_btn_container">
+        <a href="/venues" class="btn header_btn">Venues</a>
+        <a href="/bands" class="btn header_btn">Bands</a>
+        <a href="/events/new" class="btn header_btn">Add New Event</a>
+    </div>
+</header>
+
+<main class="main">
+    
+    <!-- Full Data Grid -->
+    <div class="section index">
+
+        <% for(let i = 0; i < allEvents.length; i++) { %>
+            <div class="card">
+
+                <a href="/events/<%= allEvents[i]._id %> ">
+                <div class="card_name"><h3><%= allEvents[i].name %> </h3></div>
+
+                    <% if(allEvents[i].images.main) { %>
+                        <img class="card_img crop" src="<%= allEvents[i].images.main %> " alt="a picture of <%= allEvents[i].name %> ">
+                    <% } else if(! allEvents[i].images.main && allEvents[i].images.alt[0]) { %>
+                        <img class="card_img crop" src="<%= allEvents[i].images.alt[0] %> " alt="a picture of <%= allEvents[i].name %> ">
+                    <% } else { %>
+                        <img class="card_img crop" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjopl3s0EdKa1VkyVmQpEWFm-2zgPpH4U2UTKKgsepeWmF9nmARBQaTcFkHP9Mz0WjcQ0&usqp=CAU" alt="a picture of live music">
+                    <% } %>
+                </a>
+
+                <div class="card_btns_container">
+                    <a href="/events/<%= allEvents[i]._id %>/edit ">
+                        <button class="card_btn btn update_btn">UPDATE</button>
+                    </a>
+                    <form action="/events/<%= allEvents[i]._id %>?_method=DELETE" method="POST">
+                        <input type="submit" value="DELETE" class="btn card_btn">
+                    </form>
+                </div>    
+            </div>
+        <% } %>  
+    </div>
+</main>

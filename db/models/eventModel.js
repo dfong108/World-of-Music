@@ -1,15 +1,20 @@
 const mongoose = require('../connection');
 
+const LocationSchema = new mongoose.Schema(
+    {
+        country: String,
+        state: String,
+        city: String,
+        slogan: String,
+    }
+)
+
 const EventSchema = new mongoose.Schema(
     {
         name: String,
         featured_bands: [String],
         date: Date,
-        location: {
-            country: String,
-            state: String,
-            city: String,
-        },
+        location: LocationSchema,
  // Eventually Replace this is Venue Schema 
         venue: String,
         genres: [String],

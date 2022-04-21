@@ -85,5 +85,18 @@
                 "https://cdn.theculturetrip.com/wp-content/uploads/2018/06/simon-frsig-christensen-40-1200px.jpg"
             ]
         }
+    },
+    {
+        "name": "test event",
+        "featured_bands": ["AC/DC", "Bob Marley", "Metallica", "The Rolling Stones", "Guns N' Roses"],
+        "date": ["2022-07-02"],
+        "location": 
+            {
+                "country": "Denmark",
+                "city": "Roskilde"
+            },
+        "venue": "The Orange Stage",
+        "genres": ["pop", "rock", "electronic", "reggae", "hip hop", "world"],
+        "description": "The Roskilde Festival is a Danish music festival held annually south of Roskilde. It is one of the largest music festivals in Europe and the largest in the Nordics. Created in 1971 by two high school students and a promoter, it is now one of the world's oldest and most notable music festivals."
     }
 ]

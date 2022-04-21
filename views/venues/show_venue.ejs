@@ -1,0 +1,61 @@
+<header>
+    <h3 class="page_title font">Venues</h3>
+    <div class="header_btn_container">
+        <a href="/bands" class="btn header_btn">Bands</a>
+        <a href="/events" class="btn header_btn">Events</a>
+        <a href="/venues" class="btn header_btn">Venues</a>
+        <a href="/bands/new" class="btn header_btn">Add New Band</a>
+    </div>
+</header>
+
+
+<h3> <%= name %> </h3>
+
+<div class="show-section-container">
+
+    <!-- MAIN IMAGE -->
+        <div class="show show-section main-image-section">
+            <% if(images.main) { %> 
+                <img src="<%= images.main %> " alt="a picture about <%= name %> ">
+            <% } else if(! images.main && images.alt[0]) { %> 
+                <img src="<%= images.alt[0] %> " alt="a picture about <%= name %> ">
+            <% } else { %>
+                <img src="/assets/livemusic.jpeg" alt="a picture about live music ">
+            <% } %> 
+        </div>
+    <!-- LOCATION -->
+        <% if(location) { %> 
+            <div class="show show-section location-section">
+                <h4>Location</h4>
+                <% if(location.city) { %> 
+                    <span> <%= location.city %>, </span>
+                <% } %> 
+                <% if(location.state) { %> 
+                    <span> <%= location.state %>, </span>
+                <% } %> 
+                <% if(location.country) { %> 
+                    <span> <%= location.country %> </span>
+                <% } %> 
+            </div>
+        <% } %> 
+    <!-- WEBSITE -->
+        <% if(website) { %> 
+            <div class="show show-section website-section">
+                <a href="<%= website %>" target="_blank">Learn More about <%= name %></a>
+            </div>
+        <% } %> 
+    <!-- UPCOMING EVENTS -->
+    <!-- ALT IMAGES -->    
+        <div class="show show-section more-images-section">
+            <% for(let i = 0; i < images.alt.length; i++) { %> 
+                <div class="alt-img">
+                    <img src="<%= images.alt[i] %>" alt="a picture of <%= name %> "/>
+                </div>
+            <% } %> 
+        </div>
+
+
+    <!-- WEBSITE -->
+    <!-- WEBSITE -->
+
+</div>

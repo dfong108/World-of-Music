@@ -1,0 +1,50 @@
+<h2>EDIT <%= name %> </h2>
+
+<form action="/events/<%= _id %>/?_method=put" method="POST">
+    <!-- NAME -->
+    <div class="edit-name form-group form-section">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <!-- FEATURED BANDS -->
+    <div class="edit-featured-bands form-group form-section">
+
+    </div>
+    <!-- DATE -->
+    <div class="edit-date form-group form-section">
+
+    </div>
+    <!-- LOCATION -->
+    <div class="edit-location form-group form-section">
+        <span class="form-section-title">Location</span>
+        
+        <label for="location.country">Country</label>
+        <input type="text" id="location-country" name="location.country" class="form-text-input">
+
+        <label for="location.state">State</label>
+        <input type="text" id="location-state" name="location.state" class="form-text-input">
+
+        <label for="location.city">City</label>
+        <input type="text" id="location-city" name="location.city" class="form-text-input">
+    </div>
+    <!-- VENUE -->
+    <div class="edit-venue form-group form-section">
+
+    </div>
+    <!-- GENRES -->
+    <div class="edit-genres form-group form-section">
+
+    </div>
+    <!-- DESCRIPTION -->
+    <div class="edit-description form-group form-section">
+        <label for="description">Description:</label>
+        <textarea type="text" id="description"></textarea>
+    </div>
+    <!-- IMAGES -->
+    <div class="edit-images form-group form-section">
+
+    </div>
+    <input type="submit" class="btn btn-primary"/>
+    <a href="/events" class="btn btn-secondary">Cancel</a>
+
+</form>

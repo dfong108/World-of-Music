@@ -1,13 +1,20 @@
 const mongoose = require('../connection');
 
+// IMPORT OTHER SCHEMAS
+
+
+const LocationSchema = new mongoose.Schema(
+    {
+        country: String,
+        state: String,
+        city: String,
+    },
+)
+
 const VenueSchema = new mongoose.Schema(
     {
         name: {type: String, unique: true},
-        location: {
-            country: String,
-            state: String,
-            city: String,
-        },
+        location: LocationSchema,
         website: String,
         upcoming_events: {
             title: String,

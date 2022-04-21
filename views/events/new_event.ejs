@@ -1,0 +1,36 @@
+<form action="/events" method="POST">
+    <!-- Event Name -->
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" class="form-control">
+    </div>
+    <!-- Featured Bands (array) -->
+    <!-- Date -->
+    <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" class="form-content">
+        <label for="time">Time</label>
+        <input type="time" id="time" name="date" class="form-content">
+    </div>
+    <!-- Location -->
+    <div class="form-group">
+        <span>Location</span>
+        <label for="country">Country</label>
+        <input type="text" id="country" name="location.country" class="form-content">
+        <label for="state">State</label>
+        <input type="text" id="state" name="location.state" class="form-content">
+        <label for="city">City</label>
+        <input type="text" id="city" name="location.city" class="form-content">
+    </div>
+    <!-- Venue -->
+    <div class="form-group">
+        <label for="venue">Venue:</label>
+        <input type="text" id="venue" name="venue" class="form-content">
+    </div>
+    <!-- Genres (array) -->
+    <!-- Description -->
+    <!-- Images -->
+
+    <input type="submit" class="btn btn-primary">
+    <a href="/events" class="btn btn-secondary">Cancel</a>
+</form>

@@ -1,0 +1,114 @@
+<header>
+    <h3 class="page_title font">Bands</h3>
+    <div class="header_btn_container">
+        <a href="/bands" class="btn header_btn">Bands</a>
+        <a href="/events" class="btn header_btn">Events</a>
+        <a href="/venues" class="btn header_btn">Venues</a>
+        <a href="/bands/new" class="btn header_btn">Add New Band</a>
+    </div>
+</header>
+
+
+<h3 class="show show-title"> <%= name %> </h3>
+
+<div class="show-section-container">
+
+    <!-- MAIN IMAGE -->
+        <div class="show show-section main-image-section">
+            <% if(images.main) { %> 
+                <img src="<%= images.main %> " alt="a picture about <%= name %> ">
+            <% } else if(! images.main && images.alt[0]) { %> 
+                <img src="<%= images.alt[0] %> " alt="a picture about <%= name %> ">
+            <% } else { %>
+                <img src="/assets/livemusic.jpeg" alt="a picture about live music ">
+            <% } %> 
+        </div>
+    <!-- BIOGRAPHY -->
+        <div class="show show-section biography-section">
+            <h4>Biography</h4>
+            <p> <%= biography %> </p>
+        </div>
+    <!-- MEMBERS -->
+        <div class="show show-section members-section">
+            <h4>Members</h4>
+            <ul>
+                <% for(let i = 0; i < members.length; i++) { %>
+                    <li> 
+                        <a href="#"> 
+                            <%= members[i].name %>
+                        </a> - <%= members[i].roles %> 
+                    </li>
+                <% } %>  
+            </ul>
+        </div>
+    <!-- ORIGINS -->
+        <% if(origin) { %> 
+        <div class="show show-section location-section">
+            <h4>Origins</h4>
+            <% if(origin.city) { %> 
+                <span> <%= origin.city %>, </span>
+            <% } %> 
+            <% if(origin.state) { %> 
+                <span> <%= origin.state %>, </span>
+            <% } %> 
+            <% if(origin.country) { %> 
+                <span> <%= origin.country %> </span>
+            <% } %> 
+        </div>
+        <% } %> 
+    <!-- SONGS -->
+        <div class="show show-section songs-section">
+            <h4>Songs</h4>
+            <ul>
+                <% for(let i = 0; i < songs.length; i++) { %>
+                    <li> <%= songs[i] %> </li>
+                <% } %>  
+            </ul>
+        </div>
+    <!-- Touring -->
+        <div class="show show-section touring-section">
+            <h4>Touring</h4>
+            <% if(touring) { %>
+                <p>YES</p>
+            <% } else { %>  
+                <p>NO</p>
+            <% } %> 
+        </div>
+    <!-- GENRES -->
+        <div class="show show-section genres-section">
+            <h4>Genres</h4>
+            <ul>
+                <% for(let i = 0; i < genres.length; i++) { %>
+                    <li> <%= genres[i] %> </li>
+                <% } %>  
+            </ul>
+        </div>
+    <!-- TAGS -->
+        <div class="show show-section tags-section">
+            <h4>Tags</h4>
+            <ul>
+                <% for(let i = 0; i < tags.length; i++) { %>
+                    <li> <%= tags[i] %> </li>
+                <% } %>  
+            </ul>
+        </div>
+    <!-- ALT IMAGES -->    
+        <div class="show show-section more-images-section">
+            <% for(let i = 0; i < images.alt.length; i++) { %> 
+                <div class="alt-img">
+                    <img src="<%= images.alt[i] %>" alt="a picture of <%= name %> "/>
+                </div>
+            <% } %> 
+        </div>
+
+
+</div>
+
+
+
+<!-- <section class="upcoming_events">
+
+</section>
+
+<section class="upcoming_events">
+</section> -->
