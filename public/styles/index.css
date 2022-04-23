@@ -19,7 +19,7 @@ a {
     text-decoration: none;
 }
 
-header {
+nav {
     display: inline-flex;
     width: 99%;
     align-items: center;
@@ -33,12 +33,8 @@ header {
     border: 4px outset var(--dark);
 }
 
-.header_btn_container {
-    margin-right: 5px;
-}
-
-.header_btn_container :last-child {
-    margin-left: 5rem;
+.dropdown_btn {
+    display: none;
 }
 
 body {
@@ -61,12 +57,15 @@ body {
     border: 4px outset var(--primary);
 }
 
-.header_btn:hover {
+.nav_btn:hover {
     border: 4px outset var(--accent)
 }
 
 .section {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+
+    /* display: grid; */
     grid-gap: 40px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -74,6 +73,7 @@ body {
     border: 10px double var(--primary);
     border: 10px double var(--secondary);
     background: var(--dark);
+    justify-content: center;
 }
 
 .card {
@@ -82,7 +82,9 @@ body {
     align-items: center;
     justify-items: center;
     text-align: center;
-    height: 450px;
+    max-height: 450px;
+    max-width: 300px;
+    min-width: 300px;
     background: black;
     padding-bottom: 0;
     box-shadow: var(--color_shadow);
@@ -111,9 +113,72 @@ body {
 
 .card_btns_container {
     display: inline-flex;
+    justify-content: space-between;
     margin-top: 5rem;
-    margin-bottom: 0;
-    align-self: center;
     justify-self: flex-end;
+    max-height: 100%;
 }
 
+/* ------- MEDIA QUERIES ------- */
+
+
+@media (max-width: 768px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* ------ NAV ------ */
+
+    nav {
+        max-width: 100%;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .nav_menue {
+        display: none;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .dropdown_btn {
+        display: block;
+        margin-right: 10px;
+    }
+    
+    .dropdown:hover .nav_menue {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        /* flex-direction: column; */
+    }
+
+    .nav_menue a {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav_menue a:hover {
+        color: var(--accent);
+        border: 4px solid black
+    }
+
+    /* ------ MAIN SECTION ------ */
+
+    .section {
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 40px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        /* margin-right: 10px; */
+    }
+
+}

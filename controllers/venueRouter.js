@@ -2,12 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Venues = require('../db/models/venueModel');
 
-function displayIndex(req, res) {
-    // Venues.find({}, {"name": 1})
-    Venues.find({}, {"name": 1, "location": 1})
-        .then((data) => res.json(data))
-        .catch((err) => res.json(err))
-}
 
 // --- CREATE ---
     router.get('/new', (req, res) => {
@@ -15,14 +9,12 @@ function displayIndex(req, res) {
     })
     router.post('/', (req, res) => {
         Venues.create(req.body)
-            // .then(() => displayIndex(req, res)) ----> Testing
             .then(() => res.redirect('/venues'))
             .catch((err) => res.json(err))
     })
 
 // --- READ ---
     router.get('/', (req, res) => {
-        // displayIndex(req, res) ----> Testing
         Venues.find({})
             .then((venues) => res.render('venues/venues_index.ejs', {allVenues: venues}))
             .catch((err) => res.json(err))
@@ -34,7 +26,6 @@ function displayIndex(req, res) {
             .catch((err) => res.json(err))
     })
 
-
 // --- UPDATE ---
     router.get('/:id/edit', (req, res) => {
         const id = req.params.id
@@ -45,7 +36,6 @@ function displayIndex(req, res) {
     router.put('/:id', (req, res) => {
         const id = req.params.id
         Venues.findByIdAndUpdate(id, req.body)
-            // .then(() => displayIndex(req, res)) ----> Testing
             .then(() => res.redirect('/events'))
             .catch((err) => res.json(err))
     })
@@ -54,13 +44,9 @@ function displayIndex(req, res) {
     router.delete('/:id', (req, res) => {
         const id = req.params.id
         Venues.findByIdAndDelete(id)
-            // .then(() => displayIndex(req, res)) ----> Testing
             .then(() => res.redirect('/venues'))
             .catch((err) => res.json(err))
     })
-
-
-
 
 
     module.exports = router;

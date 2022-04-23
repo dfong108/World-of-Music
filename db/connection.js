@@ -8,7 +8,7 @@ const mongoURI =
 
 mongoose.connect(mongoURI)
     .then((conn) => {
-        console.log(`*** Conncted to MongoDB on ${conn.connections[0].name} ***`)
+        console.log(`*** Connected to MongoDB on ${conn.connections[0].name} ***`)
     })
     .catch(err => {
         console.error(err)

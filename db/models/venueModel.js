@@ -13,7 +13,7 @@ const LocationSchema = new mongoose.Schema(
 
 const VenueSchema = new mongoose.Schema(
     {
-        name: {type: String, unique: true},
+        name: String,
         location: LocationSchema,
         website: String,
         upcoming_events: {
