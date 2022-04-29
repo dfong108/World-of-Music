@@ -1,6 +1,7 @@
 <main>
+
     <nav>
-        <h3 class="page_title font">Bands</h3>
+        <h3 class="page_title font">Venues</h3>
         <div class="dropdown">
             <button class="dropdown_btn btn nav_btn"><i class="fa-solid fa-chevron-down"></i></button>
             <div class="nav_menue">
@@ -16,7 +17,7 @@
     <div class="section index">
 
         <% for(let i = 0; i < allVenues.length; i++) { %> 
-            <div class="card">
+            <div class="venue_card card">
 
             <a href="/venues/<%= allVenues[i]._id %> "> 
                 

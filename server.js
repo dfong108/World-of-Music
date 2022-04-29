@@ -1,10 +1,12 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
 const cors = require('cors');
-// const mongoose = require('mongoose');
 const expressLayouts = require('express-ejs-layouts')
 require('method-override');
+
+// const mongoose = require('mongoose');
 
 const bandRouter = require('./controllers/bandRouter');
 const eventRouter = require('./controllers/eventRouter');

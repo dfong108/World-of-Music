@@ -80,7 +80,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
+    justify-items: space-between;
     text-align: center;
     max-height: 450px;
     max-width: 300px;
@@ -90,7 +90,16 @@ body {
     box-shadow: var(--color_shadow);
     position:inherit;
     border-radius: 10px;
+    border: 4px outset var(--primary);
 }
+
+.venue_card {
+    border-color: rgb(201, 46, 201);
+}
+.event_card {
+    border-color: rgb(7, 201, 0);
+}
+
 .card:hover {
     border: 4px solid var(--accent);
     box-shadow: none;
@@ -103,7 +112,6 @@ body {
     max-width:90%;
     /* z-index: 0; */
 }
-
 
 .card_name {
     color: var(--light);
@@ -119,6 +127,22 @@ body {
     max-height: 100%;
 }
 
+/* ------- Latesst updates 4/23/22 ------- */
+/* ------- Latesst updates 4/23/22 ------- */
+
+/* .card {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding: 5px;
+} */
+
+
+
+
+
+
+/* ------- MEDIA QUERIES ------- */
 /* ------- MEDIA QUERIES ------- */
 
 

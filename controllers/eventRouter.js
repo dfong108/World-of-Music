@@ -22,7 +22,7 @@ const Events = require('../db/models/eventModel');
     router.get('/:id', (req, res) => {
         const id = req.params.id
         Events.findById(id)
-            .then((event) => res.render('events/show_event.ejs', {event}))
+            .then((event) => res.render('events/show_event.ejs', event))
             .catch((err) => res.json(err))
     })
 
@@ -36,7 +36,7 @@ const Events = require('../db/models/eventModel');
     router.put('/:id', (req, res) => {
         const id = req.params.id
         Events.findByIdAndUpdate(id, req.body)
-            .then(() => res.redirect('/events'))
+            .then((event) => res.redirect('/events'))
             .catch((err) => res.json(err))
     })
 

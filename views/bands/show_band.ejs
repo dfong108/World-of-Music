@@ -1,141 +1,148 @@
 <head>
-    <link rel="stylesheet" href="/styles/bands.css">
+    <link rel="stylesheet" href="/styles/show.css">
 </head>
 
-    <nav>
-        <a href="/bands"> <h3 class="page_title font">Back</h3> </a>
-        <h3 class="show show-title"> <%= name %> </h3>
-        <div class="dropdown">
-            <button class="dropdown_btn btn nav_btn"><i class="fa-solid fa-chevron-down"></i></button>
-            <div class="nav_menue">
-                <a href="/events" class="btn nav_btn">Events</a>
-                <a href="/venues" class="btn nav_btn">Venues</a>
-                <a href="/bands/new" class="btn nav_btn">Add New Band</a>
-            </div>
+<nav>
+    <div class="edit_btns_container">
+        <a href="/bands"> <h3 class="nav_btn btn font">Back</h3> </a>
+        <a href="/bands/<%= _id %>/edit "> <h3 class="nav_btn btn font">Edit</h3> </a>
+    </div>
+    <h3 class="show page_title"> <%= name %> </h3>
+
+    <div class="dropdown">
+        <button class="dropdown_btn btn nav_btn"><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="nav_menue">
+            <a href="/events" class="btn nav_btn">Events</a>
+            <a href="/venues" class="btn nav_btn">Venues</a>
+            <a href="/bands/new" class="btn nav_btn">Add New Band</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
 <main>
 
     <div class="main-info main-section">
+
         <div class="subsection subsection-one">
+
             <!-- MAIN IMAGE -->
                 <div class="show-section main-img-section">
-                    <% if(images.main) { %> 
-                        <a href="<%= images.main %> " target="_blank">
-                            <img class="page-img main-img" src="<%= images.main %> " alt="a picture about <%= name %> ">
-                        </a>
-                    <% } else if(! images.main && images.alt[0]) { %> 
-                        <a href="<%= images.alt[0] %> " target="_blank">
-                            <img class="page-img main-img" src="<%= images.alt[0] %> " alt="a picture about <%= name %> ">
-                        </a>
-                    <% } else { %>
-                            <img class="page-img main-img" src="/assets/livemusic.jpeg" alt="a picture about live music ">
+                    <div class="main-img-container">
+                        <% if(images.main) { %> 
+                            <a href="<%= images.main %> " target="_blank">
+                                <img class="page-img main-img" src="<%= images.main %> " alt="a picture about <%= name %> ">
+                            </a>
+                        <% } else if(! images.main && images.alt[0]) { %> 
+                            <a href="<%= images.alt[0] %> " target="_blank">
+                                <img class="page-img main-img" src="<%= images.alt[0] %> " alt="a picture about <%= name %> ">
+                            </a>
+                        <% } else { %>
+                                <img class="page-img main-img" src="/assets/livemusic.jpeg" alt="a picture about live music ">
+                        <% } %> 
+                    </div>
+                </div>
+
+            <!-- ALT IMAGES -->   
+                <% if (images.alt.length > 0) { %>  
+                    <div class="show show-section alt-img-section">
+                        <% for(let i = 0; i < images.alt.length; i++) { %> 
+                            <div class="alt-img-container">
+                                <img class="alt-img" src="<%= images.alt[i] %>" alt="a picture of <%= name %> "/>
+                            </div>
                     <% } %> 
                 </div>
-            <!-- ALT IMAGES -->    
-                <div class="show show-section alt-img-section">
-                    <% for(let i = 0; i < images.alt.length; i++) { %> 
-                        <div class="alt-img-container">
-                            <img class="alt-img" src="<%= images.alt[i] %>" alt="a picture of <%= name %> "/>
-                        </div>
-                    <% } %> 
+                <% } %> 
+
+            <!-- UPCOMING EVENTS -->    
+                <div class="show show-section upcoming-events-section">
+                    <h4 class="section-title">Schedule</h4>
+                    <div class="events_container">
+                        <% for(let i = 0; i < 10; i++) { %> 
+                            <div class="event">
+                                <p>Upcoming Event</p>
+                            </div>
+                        <% } %> 
+                    </div>
                 </div>
         </div>
 
         <div class="subsection subsection-two">
+
             <div class="main-bio">
-            <!-- BIOGRAPHY -->
-                <div class="show-section biography-section">
-                    <h4 class="section-title">Biography</h4>
-                    <p> <%= biography %> </p>
-                </div>
-            <!-- ORIGINS -->
-                <% if(origin) { %> 
-                <div class="show show-section orign-section">
-                    <h4 class="section-title">Origins</h4>
-                    <% if(origin.city) { %> 
-                        <span> <%= origin.city %>, </span>
+                <!-- BIOGRAPHY -->
+                    <div class="show-section biography-section">
+                        <h4 class="section-title">Biography</h4>
+                        <p> <%= biography %> </p>
+                    </div>
+
+                <!-- ORIGINS -->
+                    <% if(origin) { %> 
+                    <div class="show show-section origin-section">
+                        <h4 class="section-title">Origins</h4>
+                        <% if(origin.city) { %> 
+                            <span> <%= origin.city %>, </span>
+                        <% } %> 
+                        <% if(origin.state) { %> 
+                            <span> <%= origin.state %>, </span>
+                        <% } %> 
+                        <% if(origin.country) { %> 
+                            <span> <%= origin.country %> </span>
+                        <% } %> 
+                    </div>
                     <% } %> 
-                    <% if(origin.state) { %> 
-                        <span> <%= origin.state %>, </span>
-                    <% } %> 
-                    <% if(origin.country) { %> 
-                        <span> <%= origin.country %> </span>
-                    <% } %> 
-                </div>
-                <% } %> 
             </div>
+
             <!-- MEMBERS -->
                 <div class="show-section members-section">
                     <h4 class="section-title">Members</h4>
-                    <ul>
                         <% for(let i = 0; i < members.length; i++) { %>
-                            <li> 
+                            <div class="member"> 
                                 <a href="#"> 
                                     <%= members[i].name %>
-                                </a> - <%= members[i].roles %> 
-                            </li>
+                                </a> - <br> <%= members[i].roles %> 
+                            </div>
                         <% } %>  
-                    </ul>
                 </div>
         </div>
 
         <div class="subsection subsection-three">
+
             <!-- SONGS -->
-                <div class="show show-section songs-section">
+                <div class="show scroll_container show-section songs-section">
                     <h4 class="section-title">Songs</h4>
+                    <div class="songs_container">
                         <% for(let i = 0; i < songs.length; i++) { %>
                             <div class="song">
-                                <p> <%= songs[i] %> </p> </div>
+                                <p> <%= songs[i] %> </p> 
+                            </div>
                         <% } %>  
+                    </div>
                 </div>
-            <!-- Touring -->
-                <!-- <div class="show show-section touring-section">
-                    <h4>Touring</h4>
-                    <% if(touring) { %>
-                        <p>YES</p>
-                    <% } else { %>  
-                        <p>NO</p>
-                    <% } %> 
-                </div> -->
+
             <!-- GENRES -->
                 <div class="show show-section genres-section">
-                    <h4>Genres</h4>
-                    <ul>
+                    <h4 class="section-title">Genres</h4>
+                    <div class="scroll_container genres_container">
                         <% for(let i = 0; i < genres.length; i++) { %>
-                            <li> <%= genres[i] %> </li>
+                            <div class="genre">
+                                <p> <%= genres[i] %> </p>
+                            </div>
                         <% } %>  
-                    </ul>
+                    </div>
                 </div>
             <!-- TAGS -->
                 <div class="show show-section tags-section">
-                    <h4>Tags</h4>
-                    <ul>
+                    <h4 class="section-title">Tags</h4>
+                    <div class="scroll_container tags_container">
                         <% for(let i = 0; i < tags.length; i++) { %>
-                            <li> <%= tags[i] %> </li>
+                            <div class="tag">
+                                <p> <%= tags[i] %> </p>
+                            </div>
                         <% } %>  
-                    </ul>
-                </div>
-        </div>
-
-        <div class="subsection subsection-four">
-            <!-- UPCOMING EVENTS -->    
-                <div class="show show-section upcoming-events-section">
-                    <% for(let i = 0; i < 10; i++) { %> 
-                        <div class="event">
-                            <p>Upcoming Event</p>
-                        </div>
-                    <% } %> 
+                    </div>
                 </div>
         </div>
 
     </div>
 
-    <!-- <section class="upcoming_events">
-
-    </section>
-
-    <section class="upcoming_events">
-    </section> -->
 </main>

@@ -13,17 +13,17 @@ const venueSeeds = require('./venueSeeds.json');
 
 // Load the Mongoose Database
 
-    // Bands.deleteMany({})
-    //     .then(() => Bands.insertMany(bandSeeds))
-    //     .then(console.log)
-    //     .catch(console.error)
-    //     .finally(() => process.exit())
+    Bands.deleteMany({})
+        .then(() => Bands.insertMany(bandSeeds))
+        .then(console.log)
+        .catch(console.error)
+        .finally(() => process.exit())
 
     // Events.deleteMany({})
     //     .then(() => Events.insertMany(eventSeeds))
     //     .then(console.log)
     //     .catch(console.error)
-    //     .finally(() => process.exit())
+    //     // .finally(() => process.exit())
 
     // Venues.deleteMany({})
     //     .then(() => Venues.insertMany(venueSeeds))

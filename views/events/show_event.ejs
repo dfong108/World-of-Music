@@ -1,63 +1,116 @@
-<header>
-    <h3 class="page_title font">Events</h3>
-    <div class="header_btn_container">
-        <a href="/events" class="btn header_btn">Events</a>
-        <a href="/bands" class="btn header_btn">Bands</a>
-        <a href="/venues" class="btn header_btn">Venues</a>
-        <a href="/events/new" class="btn header_btn">Add New Event</a>
+<head>
+    <link rel="stylesheet" href="/styles/show.css">
+</head>
+
+<nav>
+    <div class="edit_btns_container">
+        <a href="/events"> <h3 class="nav_btn btn font">Back</h3> </a>
+        <a href="/events/<%= _id %>/edit "> <h3 class="nav_btn btn font">Edit</h3> </a>
     </div>
-</header>
+    <h3 class="show page_title"> <%= name %> </h3>
 
-<h3 class="show show-title"><%= event.name %> </h3>
-
-<div class="show-section-container">
-
-    <!-- MAIN IMAGE -->
-        <div class="show show-section main-image-section">
-            <% if(event.images.main) { %> 
-                <img src="<%= event.images.main %> " alt="a picture about <%= event.name %> ">
-            <% } else if(! event.images.main && event.images.alt[0]) { %> 
-                <img src="<%= event.images.alt[0] %> " alt="a picture about <%= event.name %> ">
-            <% } else { %>
-                <img src="/assets/livemusic.jpeg" alt="a picture about live music ">
-            <% } %> 
+    <div class="dropdown">
+        <button class="dropdown_btn btn nav_btn"><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="nav_menue">
+            <a href="/bands" class="btn nav_btn">Bands</a>
+            <a href="/venues" class="btn nav_btn">Venues</a>
+            <a href="/events/new" class="btn nav_btn">Add New Event</a>
         </div>
+    </div>
+</nav>
 
-    <!-- LOCATION -->
-        <div class="show-section location-section">
-            <% if(event.location.city) { %> 
-                <span> <%= event.location.city %>, </span>
-            <% } %> 
-            <% if(event.location.state) { %> 
-                <span> <%= event.location.state %> </span>
-            <% } %> 
-            <% if(event.location.country) { %> 
-                <span><%= event.location.country %></span>
-            <% } %> 
-        </div>
+<main>
 
-    <!-- DATE -->
-        <div class="show-section date-section">
-            <%= event.date %> 
-        </div>
+    <div class="main-info main-section">
+        
+        <div class="subsection subsection-one">
 
-    <!-- FEATURED BANDS -->
-        <div class="show-section featured-bands-section">
-            <ul>
-                <% for(let i = 0; i < event.featured_bands.length; i++) { %>
-                    <li><%= event.featured_bands[i] %></li>
-                <% } %>
-            </ul>
-        </div>
-    <!--  -->
-    <!-- ALT IMAGES -->    
-        <div class="show show-section more-images-section">
-            <% for(let i = 0; i < event.images.alt.length; i++) { %> 
-                <div class="alt-img">
-                    <img src="<%= event.images.alt[i] %>" alt="a picture of <%= event.name %> "/>
+            <!-- MAIN IMAGE -->
+                <div class="show-section main-img-section">
+                    <div class="main-img-container">
+                        <% if(images.main) { %> 
+                            <a href="<%= images.main %> " target="_blank">
+                                <img class="page-img main-img" src="<%= images.main %> " alt="a picture about <%= name %> ">
+                            </a>
+                        <% } else if(! images.main && images.alt[0]) { %> 
+                            <a href="<%= images.alt[0] %> " target="_blank">
+                                <img class="page-img main-img" src="<%= images.alt[0] %> " alt="a picture about <%= name %> ">
+                            </a>
+                        <% } else { %>
+                                <img class="page-img main-img" src="/assets/livemusic.jpeg" alt="a picture about live music ">
+                        <% } %> 
+                    </div>
                 </div>
-            <% } %> 
+
+            <!-- ALT IMAGES -->    
+                <div class="show show-section alt-img-section">
+                    <% for(let i = 0; i < images.alt.length; i++) { %> 
+                        <div class="alt-img-container">
+                            <img class="alt-img" src="<%= images.alt[i] %>" alt="a picture of <%= name %> "/>
+                        </div>
+                    <% } %> 
+                </div>
+
+            <!-- DATE -->
+                <div class="show-section date-section">
+                    <span> Day: <%= date.getDay() %> </span>
+                    <span> Date: <%= date.getDate() %> </span>
+                    <span> Month: <%= date.getMonth() %> </span>
+                    <span> Year: <%= date.getYear() %> </span>
+                </div>
+
+            <!-- FEATURED BANDS -->    
+                <div class="show show-section upcoming-events-section">
+                    <h4 class="section-title">Featured Artists</h4>
+                    <div class="events_container">
+                        <% for(let i = 0; i < featured_bands.length; i++) { %> 
+                            <div class="event">
+                                <p><%= featured_bands[i] %></p>
+                            </div>
+                        <% } %> 
+                    </div>
+                </div>
         </div>
 
+        <div class="subsection subsection-two">
 
-</div>
+            <div class="main-bio">
+                <!-- DESCRIPTION -->
+                    <div class="show-section biography-section">
+                        <h4 class="section-title">Description</h4>
+                        <p> <%= description %> </p>
+                    </div>
+
+                <!-- LOCATION -->
+                    <div class="show show-section orign-section">
+                        <h4 class="section-title">Location</h4>
+                        <% if(location.city) { %> 
+                            <span> <%= location.city %>, </span>
+                        <% } %> 
+                        <% if(location.state) { %> 
+                            <span> <%= location.state %> </span>
+                        <% } %> 
+                        <% if(location.country) { %> 
+                            <span><%= location.country %></span>
+                        <% } %> 
+                    </div>
+            </div>
+
+        </div>
+
+        <div class="subsection subsection-three">
+        
+            <!-- GENRES -->
+                <div class="show show-section genres-section">
+                    <h4>Genres</h4>
+                    <ul>
+                        <% for(let i = 0; i < genres.length; i++) { %>
+                            <li> <%= genres[i] %> </li>
+                        <% } %>  
+                    </ul>
+                </div>
+        </div>
+      
+    </div>
+
+</main>

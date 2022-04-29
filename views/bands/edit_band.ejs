@@ -1,89 +1,253 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/styles/forms.css">
+    <link rel="stylesheet" type="text/css" href="/styles/show.css">
+    <script defer src="/scripts/forms.js" type="text/javascript"></script>
 </head>
 
-<h2 class="form__title">EDIT <%= name %></h2>
+<style>
+    body {
+        background: rgba(251, 249, 235, 0.737);
+        background: rgba(203, 203, 203, 0.737);
+    }
+</style>
+
+<nav>
+    <div class="edit_btns_container">
+        <a href="/bands/<%= _id %> "> <h3 class="nav_btn btn font">Back</h3> </a>
+    </div>
+
+    <h3 class="show page_title"> Edit <%= name %> </h3>
+    <div class="dropdown">
+        <button class="dropdown_btn btn nav_btn"><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="nav_menue">
+            <a href="/events" class="btn nav_btn">Events</a>
+            <a href="/venues" class="btn nav_btn">Venues</a>
+            <a href="/bands/new" class="btn nav_btn">Add New Band</a>
+        </div>
+    </div>
+</nav>
+
+
 
 <form class="edit-form" action="/bands/<%= _id %>/?_method=put" method="POST">
     <div class="form-group-container">
 
-        <!-- Band Name -->
-        <div class="edit-name form-group form-section">
-            <label for="name">Name</label>
-            <input type="text" class="form__input form__input--error" id="name" name="name" placeholder="Enter band name">
-            <span class="form__error">Sample Error Message</span>
+        <div class="form_subContainer subContainer_One">
+
+            <!-- Band Name -->
+                <div class="edit-name form-group form-section">
+                    <label for="name">Name</label>
+                    <input type="text" class="form__input" id="name" name="name" value="<%= name %> " required>
+                    <span class="form__error">Sample Error Message</span>
+                </div>
+
+            <!-- ORIGIN -->
+                <div class="edit-location form-group form-section">
+                    <span class="form-section-title">Origin</span>
+
+                    <label class="origin" for="orgin.country"></label>
+                    <input type="text" class=" origin form__input" id="origin.country" name="origin.country" value="<%= origin.country %>">
+                    <span class="form__error">Sample Error Message</span>
+
+                    <label class="origin" for="orgin.state"></label>
+                    <input type="text" class="origin form__input" id="origin.state" name="origin.state" value="<%= origin.state %>">
+                    <span class="form__error">Sample Error Message</span>
+                    
+                    <label class="origin" for="orgin.city"></label>
+                    <input type="text" class="origin form__input" id="origin.city" name="origin.city" value="<%= origin.city %>">
+                    <span class="form__error">Sample Error Message</span>
+
+                </div>
+
+            <!-- MEMBERS (array) -->
+                <div class="edit-members form-group form-section">
+                    <label for="members">Members</label>
+
+                    <div class="array_container">
+                        
+                        <% if (members.length > 0) { %> 
+
+                        <% for (let i = 0; i < members.length; i++) { %> 
+                            <% if (members[i]) { %> 
+
+                                <div class=" dynamic_input_container">
+                                    <input type="text" class="members_input form__input" id="members.name" name="members" placeholder="name" value="<%= members[i].name %> ">
+                                    <!-- <input type="text" class="members_input form__input" id="members.roles" name="members[0]" placeholder="role"> -->
+                                    
+                                    <div class="minus_btn">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                    <div class="plus_btn">
+                                        <i class="fa-solid fa-plus"></i> 
+                                    </div>
+                                </div>
+                            <% } %> 
+                        <% } %> 
+                        <% } else { %> 
+
+                            <div class=" dynamic_input_container">
+                                <input type="text" class="members_input form__input" id="memberName" name="members" placeholder="name">
+                                <!-- <input type="text" class="members_input form__input" id="members.roles" name="members" placeholder="role"> -->
+                                
+                                <div class="minus_btn">
+                                    <i class="fa-solid fa-minus"></i>
+                                </div>
+                                <div class="plus_btn">
+                                    <i class="fa-solid fa-plus"></i> 
+                                </div>
+                            </div>
+
+                            <% } %> 
+                    </div>
+                
+                </div>
         </div>
 
-        <!-- ORIGIN -->
-        <div class="edit-location form-group form-section">
-            <span class="form-section-title">Origin</span>
+        <div class="form_subContainer subContainer_One">
+            <!-- BIOGRAPHY -->
+            <div class="edit-description form-group form-section">
+                <label for="biography">Bio</label>
+                <textarea type="text" class="form__input" id="biography" name="biography" value="<%= biography %>" maxlength="500"></textarea>
+                <span class="form__error">Sample Error Message</span>
+            </div>
 
-            <label class="origin" for="orgin.country">Country</label>
-            <input type="text" class="origin form__input form__input--error" id="origin.country" name="origin.country" placeholder="Country of Origin">
-            <span class="form__error">Sample Error Message</span>
+            <!-- SONGS (array) -->
+                <div class="edit-songs form-group form-section">
+                    <label class="songs" for="songs">Songs</label>
+                    <div class="array_container">
 
-            <label class="origin" for="orgin.state">State</label>
-            <input type="text" class="origin form__input form__input--error" id="origin.state" name="origin.state" placeholder="State of Origin">
-            <span class="form__error">Sample Error Message</span>
+                        <% if (songs.length > 0) { %>
+                            <% for (let i = 0; i < songs.length; i++) { %> 
+                                <div class=" dynamic_input_container">
+                                    <input type="text" class="songs_input form__input" id="songs" name="songs" value="<%= songs[i] %>">
+                                
+                                    <div class="minus_btn">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                    <div class="plus_btn">
+                                        <i class="fa-solid fa-plus"></i> 
+                                    </div>
+                                </div>
+                            <% } %> 
+                        <% } else { %> 
+                                <div class=" dynamic_input_container">
+                                    <input type="text" class="songs_input form__input" id="songs" name="songs" value="">
+                                
+                                    <div class="minus_btn">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                    <div class="plus_btn">
+                                        <i class="fa-solid fa-plus"></i> 
+                                    </div>
+                                </div>
+                        <% } %> 
+
+                    </div>
+                    <span class="form__error">Sample Error Message</span>
+                </div>
             
-            <label class="origin" for="orgin.city">City</label>
-            <input type="text" class="origin form__input form__input--error" id="origin.city" name="origin.city" placeholder="City of Origin">
-            <span class="form__error">Sample Error Message</span>
+            <!-- GENRES (array) -->
+                <div class="edit-genres form-group form-section">
+                    <label class="genres" for="genres">Genres</label>
+                    <div class="array_container">
+                        <% if (genres.length > 0) { %> 
+                            <% for (let  i = 0; i < genres.length; i++) { %> 
+                                <div class=" dynamic_input_container">
+                                    
+                                    <input type="text" class="genres_input form__input" id="genres" name="genres" value="<%= genres[i] %> ">
+                                
+                                    <div class="minus_btn">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                    <div class="plus_btn">
+                                        <i class="fa-solid fa-plus"></i> 
+                                    </div>
 
+                                </div>
+                            <% } %> 
+                        <% } else { %> 
+                                <div class=" dynamic_input_container">
+                                        
+                                    <input type="text" class="genres_input form__input" id="genres" name="genres" placeholder="add genre">
+                                
+                                    <div class="minus_btn">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                    <div class="plus_btn">
+                                        <i class="fa-solid fa-plus"></i> 
+                                    </div>
+
+                                </div>
+                        <% } %> 
+                    </div>
+                    <span class="form__error">Sample Error Message</span>
+                </div>
+
+            <!-- TAGS (array) -->
+                <div class="edit-tags form-group form-section">
+                    <label class="tags" for="tags">Tags</label>
+                    <div class="array_container">
+                        <% if (tags.length > 0) { %> 
+                            <% for (let  i = 0; i < tags.length; i++) { %> 
+                                <div class=" dynamic_input_container">
+                                    
+                                    <input type="text" class="tags_input form__input" id="tags" name="tags" value="<%= tags[i] %> ">
+                                
+                                    <div class="minus_btn">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                    <div class="plus_btn">
+                                        <i class="fa-solid fa-plus"></i> 
+                                    </div>
+
+                                </div>
+                            <% } %> 
+                        <% } else { %> 
+                                <div class=" dynamic_input_container">
+                                    <input type="text" class="tags_input form__input" id="tags" name="tags" placeholder="add tag">
+
+                                    <div class="minus_btn">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                    <div class="plus_btn">
+                                        <i class="fa-solid fa-plus"></i> 
+                                    </div>
+                                </div>
+                        <% } %> 
+                    </div>
+                    <span class="form__error">Sample Error Message</span>
+                </div>
+
+            <!-- Images -->
+                <div class="edit-images form-group form-section">
+                    <label class="genres" for="addImages">Add Images</label>
+                    <div class="array_container">
+                        <div class=" dynamic_input_container">
+                            <input type="file" class="image_input form__input" id="addImages" name="mainImage">
+                            <input type="url" class="url_input form__input" id="addImages" name="mainImage" placeholder="paste image url">
+                        
+                            <div class="minus_btn">
+                                <i class="fa-solid fa-minus"></i>
+                            </div>
+                            <div class="plus_btn">
+                                <i class="fa-solid fa-plus"></i> 
+                            </div>
+
+                        </div>
+                    </div>
+                    <span class="form__error">Sample Error Message</span>
+                </div>
         </div>
 
-        <!-- MEMBERS (array) -->
-        <!-- <div class="edit-members form-group form-section">
-            <span>Members</span>
-            <label for="members.name">Name</label>
-            <input type="text" name="members.name">
+    </div>
 
-            <label for="members.roles[0]">Roles</label>
-            <input type="select" name="members.roles[0]" multiple list="roles">
-            <datalist id="roles">
-                <option>vocals</option>
-                <option>rhythm guitar</option>
-                <option>bass guitar</option>
-                <option>drums</option>
-                <option>percussion</option>
-            </datalist>
-        </div> -->
-
-        <!-- BIOGRAPHY -->
-        <div class="edit-description form-group form-section">
-            <label for="biography">Bio</label>
-            <input type="text" class="form__input form__input--error" id="biography" name="biography" placeholder="What should the fans to know about the band?">
+        <!-- Form Buttons -->
+        <div class="form_btn_container">
+            <input type="submit" class="form_btn submit_btn btn btn-primary"/>
+            <a href="/bands" class="form_btn cancel_btn btn btn-secondary">Cancel</a>
         </div>
-        <!-- SONGS (array) -->
-        <div class="edit-songs form-group form-section">
-
-        </div>
-        <!-- TOURING (boolean) -->
-        <!-- <div class="edit-touring form-group form-section">
-            <label for="touring">Touring</label>
-            
-            <span>yes</span>
-            <input type="radio" name="touring" value="true">
-            <span>no</span>
-            <input type="radio" name="touring" value="false">
-        </div> -->
-        <!-- GENRES (array) -->
-        <div class="edit-genres form-group form-section">
-
-        </div>
-        <!-- TAGS (array) -->
-        <div class="edit-tags form-group form-section">
-
-        </div>
-        <!-- Images -->
-        <div class="edit-images form-group form-section">
-
-        </div>
-
-
-        <input type="submit" class="btn btn-primary"/>
-        <a href="/bands" class="btn btn-secondary">Cancel</a>
 
     </div>
 
 </form>
+

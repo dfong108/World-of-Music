@@ -22,7 +22,11 @@ const Bands = require('../db/models/bandModel');
     router.get('/:id', (req, res) => {
         const id = req.params.id
         Bands.findById(id)
-            .then((band) => res.render('bands/show_band.ejs', band))
+            .then((band) => {
+                console.log(band)
+                res.render('bands/show_band.ejs', band)
+            })
+    
             .catch((err) => res.json(err))
 
     })
@@ -31,16 +35,41 @@ const Bands = require('../db/models/bandModel');
     router.get('/:id/edit', (req, res) => {
         const id = req.params.id
         Bands.findById(id)
-            .then((band) => res.render('bands/edit_band.ejs', band))
+            .then((band) => {
+                console.log(band)
+                res.render('bands/edit_band.ejs', band)
+            })
             .catch((err) => res.json(err))
     })
+
+    // router.put('/:id', async (req, res, next)=>{
+    //     try {
+    //         const updatedBand = await Bands.findByIdAndUpdate(req.params.id, req.body);
+    //         console.log(updatedBand);
+    //         return res.redirect(`/bands`)
+    //     } catch (error) {
+    //         console.log(error);
+    //         req.error = error;
+    //         return next();
+    //     }
+    // })
+
+
     router.put('/:id', (req, res) => {
         const id = req.params.id
-        Bands.findByIdAndUpdate({_id: id}, req.body)
+        console.log(req.body)
+
+        if (typeof req.body.members === 'string') {
+            // req.body.members = [ { name: req.body.member, roles: [] } ]
+            req.body.members = [ { name: req.body.member, roles: [] } ]
+        }
+
+        console.log(req.body)
+        Bands.findByIdAndUpdate( id, req.body)
+            .then( console.log())
             .then(() => res.redirect('/bands'))
             .catch((err) => console.log(err))
     })
-
 // --- DELETE ---
     router.delete('/:id', (req, res) => {
         const id = req.params.id

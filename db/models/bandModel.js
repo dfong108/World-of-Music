@@ -4,7 +4,7 @@ const mongoose = require('../connection');
 const MembersSchema = new mongoose.Schema(
     {
         name: String,
-        roles: [String]
+        roles: [ String ]
     }
 )
 const OriginSchema = new mongoose.Schema(
@@ -22,7 +22,7 @@ const BandSchema = new mongoose.Schema(
             unique: true
         },
         origin: OriginSchema,
-        members: [MembersSchema],
+        members: [ MembersSchema ],
         biography: String,
         songs: [String],
         touring: Boolean,

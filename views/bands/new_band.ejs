@@ -1,70 +1,134 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/styles/forms.css">
+    <link rel="stylesheet" type="text/css" href="/styles/show.css">
+    <script defer src="/scripts/forms.js" type="text/javascript"></script>
 </head>
 
-    <nav>
-        <a href="/bands"> <h3 class="page_title font">Back</h3> </a>
-        <div class="dropdown">
-            <button class="dropdown_btn btn nav_btn"><i class="fa-solid fa-chevron-down"></i></button>
-            <div class="nav_menue">
-                <a href="/events" class="btn nav_btn">Events</a>
-                <a href="/venues" class="btn nav_btn">Venues</a>
-                <a href="/bands/new" class="btn nav_btn">Add New Band</a>
-            </div>
-        </div>
-    </nav>
+<style>
+    body {
+        background: rgba(251, 249, 235, 0.737);
+        background: rgba(203, 203, 203, 0.737);
+    }
+</style>
 
-<form action="/bands" method="POST">
+<nav>
+    <div class="add_btns_container">
+        <a href="/bands "> <h3 class="nav_btn btn font">Back</h3> </a>
+    </div>
+
+    <h3 class="show page_title"> Add New Band</h3>
+    <div class="dropdown">
+        <button class="dropdown_btn btn nav_btn"><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="nav_menue">
+            <a href="/bands" class="btn nav_btn">Bands</a>
+            <a href="/events" class="btn nav_btn">Events</a>
+            <a href="/venues" class="btn nav_btn">Venues</a>
+            <!-- <a href="/bands/new" class="btn nav_btn">Add New Band</a> -->
+        </div>
+    </div>
+</nav>
+
+
+<form class="add-form" action="/bands" method="POST">
     <div class="form-group-container">
         
         <!-- Band Name -->
-        <div class="form-group name-field">
-            <label for="name">Band Name:</label>
-            <input type="text" id="band_name" name="name" class="form-control"/>
+        <div class="add-name form-group form-section">
+            <label for="name">Name</label>
+            <input type="text" class="form__input" id="name" name="name" placeholder="Band name" required>
+            <span class="form__error">Sample Error Message</span>
         </div>
+
         <!-- Origin -->
-        <div class="form-group location-field>
-            <span>Origins</span>
-            <label for="origin.country">Country</label>
-            <input type="text" id="country" name="origin.country" class="form-content">
-            <label for="origin.state">State</label>
-            <input type="text" id="state" name="origin.state" class="form-content">
-            <label for="origin.city">City</label>
-            <input type="text" id="city" name="origin.city" class="form-content">
-        </div>
+            <div class="add-location form-group form-section">
+                <span class="form-section-title">Origin</span>
+
+                <label class="origin" for="orgin.country"></label>
+                <input type="text" class=" origin form__input" id="origin.country" name="origin.country" placeholder="Country">
+                <span class="form__error">Sample Error Message</span>
+
+                <label class="origin" for="orgin.state"></label>
+                <input type="text" class="origin form__input" id="origin.state" name="origin.state" placeholder="State">
+                <span class="form__error">Sample Error Message</span>
+                
+                <label class="origin" for="orgin.city"></label>
+                <input type="text" class="origin form__input" id="origin.city" name="origin.city" placeholder="City">
+                <span class="form__error">Sample Error Message</span>
+
+            </div>
+
         <!-- Members (array) -->
-        <!-- <div>
-            <span>Members</span>
-            <label for="members[0].name">Name</label>
-            <input type="text" id="members.name" name="members[0].name" class="form-content">
-            <label for="members[0].roles">roles</label>
-            <input type="text" id="members.roles" name="members[0].roles" class="form-content">
-        </div> -->
+        
+        <div class="edit-members form-group form-section">
+            <label for="members">Members</label>
+
+            <div class="array_container">
+              
+                <div class=" dynamic_input_container">
+                    <input type="text" class="members_input form__input" id="memberName" name="memberName" placeholder="name">
+                    <input type="text" class="members_input form__input" id="membersRole" name="memberRole" placeholder="role">
+                    
+                    <div class="minus_btn">
+                        <i class="fa-solid fa-minus"></i>
+                    </div>
+                    <div class="plus_btn">
+                        <i class="fa-solid fa-plus"></i> 
+                    </div>
+                </div>
+            </div>
+
+
+
         <!-- Biography -->
-        <div class="form-group bio-field">
-            <label for="biography">Bio:</label>
-            <textarea type="text" id="biography" name="biography"
-                placeholder="Tell us about the band!">
-            </textarea>
+        <div class="add-description form-group form-section">
+            <label for="biography">Bio</label>
+            <textarea type="text" class="form__input" id="biography" name="biography" placeholder="Tell us about the band (max 500 chars)." maxlength="500"></textarea>
+            <span class="form__error">Sample Error Message</span>
         </div>
+
         <!-- Songs (array) -->
-        <div class="form-group songs-field">
-            <label for="songs">Songs</label>
-            <input type="text" id="songs" name="songs" class="form-content">
+        <div class="add-songs form-group form-section">
+            <label class="songs" for="songs">Songs</label>
+            <div class="array_container">
+
+                <div class=" dynamic_input_container">
+                    <input type="text" class="songs_input form__input" id="songs" name="songs" placeholder="add song">
+                 
+                    <div class="minus_btn">
+                        <i class="fa-solid fa-minus"></i>
+                    </div>
+                    <div class="plus_btn">
+                        <i class="fa-solid fa-plus"></i> 
+                    </div>
+
+                </div>
+            </div>
+            <span class="form__error">Sample Error Message</span>
+
         </div>
-        <!-- Touring (boolean) -->
-        <!-- <div class="touring form-group">
-            <span>Touring</span>
-            <label for="touring">Yes</label>
-            <input type="radio" id="yes" name="touring" value="true">
-            <label for="touring">No</label>
-            <input type="radio" id="no" name="touring" value="false">
-        </div> -->
+       
         <!-- Genres (array) -->
-        <div class="genres-field form-group">
-            <label for="genres">New Genre</label>
-            <input type="text" name="genres" class="form-content">
+        <div class="edit-genres form-group form-section">
+            <label class="genres" for="genres">Genres</label>
+
+            <div class="array_container">
+                <div class=" dynamic_input_container">
+                    
+                    <input type="text" class="genres_input form__input" id="genres" name="genres" value="Genre">
+                 
+                    <div class="minus_btn">
+                        <i class="fa-solid fa-minus"></i>
+                    </div>
+                    <div class="plus_btn">
+                        <i class="fa-solid fa-plus"></i> 
+                    </div>
+
+                </div>
+            </div>
+            <span class="form__error">Sample Error Message</span>
+            
         </div>
+
         <!-- Tags (array) -->
         <div class="tags-field form-group">
             <label for="tags">New Tag</label>
