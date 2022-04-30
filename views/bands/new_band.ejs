@@ -23,7 +23,6 @@
             <a href="/bands" class="btn nav_btn">Bands</a>
             <a href="/events" class="btn nav_btn">Events</a>
             <a href="/venues" class="btn nav_btn">Venues</a>
-            <!-- <a href="/bands/new" class="btn nav_btn">Add New Band</a> -->
         </div>
     </div>
 </nav>
@@ -64,7 +63,7 @@
                 
                     <div class=" dynamic_input_container">
                         <input type="text" class="members_input form__input" id="memberName" name="memberName" placeholder="name">
-                        <input type="text" class="members_input form__input" id="membersRole" name="memberRole" placeholder="role">
+                        <input type="text" class="members_input form__input" id="membersRole" name="memberRole" placeholder="roles (separate by commas)">
                         
                         <div class="minus_btn">
                             <i class="fa-solid fa-minus"></i>
@@ -74,6 +73,8 @@
                         </div>
                     </div>
                 </div>
+                <span class="form__error">Every member must have at least one role. Separate roles by commas.</span>
+            </div>
 
 
 
@@ -81,7 +82,7 @@
         <div class="edit-description add-description form-group form-section">
             <label for="biography">Bio</label>
             <textarea type="text" class="form__input" id="biography" name="biography" placeholder="Tell us about the band (max 500 chars)." maxlength="500"></textarea>
-            <span class="form__error">Sample Error Message</span>
+            <span class="form__error">Write a bio 500 chars or less</span>
         </div>
 
         <!-- Songs (array) -->
@@ -100,7 +101,7 @@
                     </div>
                 </div>
             </div>
-            <span class="form__error">Sample Error Message</span>
+            <span class="form__error">Please add at least one song</span>
         </div>
        
         <!-- Genres (array) -->
@@ -110,7 +111,7 @@
             <div class="array_container">
                 <div class=" dynamic_input_container">
                     
-                    <input type="text" class="genres_input form__input" id="genres" name="genres" value="Genre">
+                    <input type="text" class="genres_input form__input" id="genres" name="genres" placeholder="add genre">
                  
                     <div class="minus_btn">
                         <i class="fa-solid fa-minus"></i>

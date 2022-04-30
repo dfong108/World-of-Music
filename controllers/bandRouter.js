@@ -1,4 +1,5 @@
 const express = require('express');
+const { get } = require('express/lib/response');
 const router = express.Router();
 const Bands = require('../db/models/bandModel');
 
@@ -7,7 +8,40 @@ const Bands = require('../db/models/bandModel');
     router.get('/new', (req, res) => {
         res.render('bands/new_band.ejs')
     })
+
     router.post('/', (req, res) => {
+
+        function getMembers () {
+
+            class Member {
+                constructor(name, roles) {
+                    this.name = name;
+                    this.roles = roles;
+                }
+            }
+            let membersArray = [];
+            let rolesArray = [];
+            let finalArray = [];
+
+            req.body.memberName.forEach((member) => {
+                membersArray.push(member)
+            })
+            req.body.memberRole.forEach((role) => {
+                rolesArray.push(role)
+            })
+
+            for (let i = 0; i < membersArray.length; i++) {
+                    let member = new Member(membersArray[i], rolesArray[i])
+                    finalArray.push(member)
+            }
+
+            req.body.members = finalArray
+            return req.body.members
+            // req.body.members = [ { name : "req.body.memberName" ,  roles: [ req.body.memberRole ] } ] 
+        }
+        getMembers();
+        
+        console.log(req.body)
         Bands.create(req.body)
             .then(() => res.redirect('/bands'))
             .catch((err) => res.json(err))
@@ -41,19 +75,6 @@ const Bands = require('../db/models/bandModel');
             })
             .catch((err) => res.json(err))
     })
-
-    // router.put('/:id', async (req, res, next)=>{
-    //     try {
-    //         const updatedBand = await Bands.findByIdAndUpdate(req.params.id, req.body);
-    //         console.log(updatedBand);
-    //         return res.redirect(`/bands`)
-    //     } catch (error) {
-    //         console.log(error);
-    //         req.error = error;
-    //         return next();
-    //     }
-    // })
-
 
     router.put('/:id', (req, res) => {
         const id = req.params.id
@@ -92,19 +113,9 @@ const Bands = require('../db/models/bandModel');
         getMembers();
                 
 
-        // ----------- Images -----------
-
-        // let imgArray = [];
-        console.log(req.body.mainImage)
-        // // req.body.mainImage.forEach((img) => {
-        // //     imgArray.push(img)
-        // // })
-
-        // console.log(imgArray)
-
         Bands.findByIdAndUpdate( id, req.body)
             // .then( console.log(req.body))
-            .then(() => res.redirect('/bands'))
+            .then(() => res.redirect(`/bands`))
             .catch((err) => console.log(err))
     })
 // --- DELETE ---

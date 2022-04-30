@@ -207,6 +207,11 @@ body {
         border: 4px solid black
     }
 
+    .DELETE {
+        color: crimson;
+        border: 4px solid crimson
+    }
+
     /* ------ MAIN SECTION ------ */
 
     .section {
