@@ -64,20 +64,8 @@ const Bands = require('../db/models/bandModel');
         
         Bands.findById(id)
             .then((band) => {
-
-                // let mainImage = band.images.main;
-                // let altImageArray = band.images.alt
-                // console.log(`main: ---- ${mainImage}`)
-                // console.log(`Alt: ---- ${altImageArray}`)
-                // altImageArray.forEach(img => {
-                //     img.addEventListener('click', (e) => {
-                //         mainImage = e.target
-                //     })
-
-                // })
-            
             res.render('bands/show_band.ejs', band)
-        })
+            })
             .catch((err) => res.json(err))
 
     })
@@ -98,7 +86,6 @@ const Bands = require('../db/models/bandModel');
         console.log(req.body)
 
         // ----------- Members -----------
-
         function getMembers () {
 
                 class Member {
@@ -129,7 +116,6 @@ const Bands = require('../db/models/bandModel');
             }
         getMembers();
                 
-
         Bands.findByIdAndUpdate( id, req.body)
             // .then( console.log(req.body))
             .then(() => res.redirect(`/bands`))

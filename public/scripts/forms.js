@@ -3,7 +3,7 @@ const form = document.querySelectorAll('form')[0]
 const formInputs = Array.from(document.querySelectorAll('.form__input'))
 
 
-// console.log(formInputs)
+console.log(formInputs)
 // console.log(form)
 
 
@@ -13,28 +13,28 @@ const formInputs = Array.from(document.querySelectorAll('.form__input'))
 
         function removeAlert () {
             formInputs.forEach (input => {
-                input.classList.remove('form__input--error')
+                if (input.classList.includes('form__input--error')) {
+                    input.classList.remove('form__input--error')
+                }
             })
         }
 
-        function formRedAlert() {
+        function formRedAlert(e) {
             formInputs.forEach(input => {
                 
                 if (input.value === "" || input.value === null) {
-                    input.classList.add('form__input--error',);
+                    input.classList.add('form__input--error');
+                    e.preventDefault();
                 } else {
                     removeAlert();
                 }
             })
         }
 
-        formRedAlert()
-
+    
         // form.addEventListener('submit', (e) => {
-        //     e.preventDefault();
-
-        //     formRedAlert()
-
+        //     console.log(e)
+        //     formRedAlert(e)
         // })
 
         
