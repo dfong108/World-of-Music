@@ -110,18 +110,6 @@ body {
     position: relative;
 }
 
-.venue_card {
-    border-color: rgb(201, 46, 201);
-}
-.event_card {
-    border-color: rgb(7, 201, 0);
-}
-
-.card:hover, .card:hover * .card_frame {
-    border: 4px solid var(--accent);
-    box-shadow: none;
-}
-
 .card_frame {
     height: 250px;
     width: 250px;
@@ -135,6 +123,31 @@ body {
     border: 4px outset aliceblue;
     border-radius: 10px;
     box-shadow: var(--color_shadow);
+}
+
+.venue_card {
+    border-color: rgb(201, 46, 201);
+    box-shadow: 0 1px 10px rgb(201, 46, 201);
+}
+.venue_card * .card_frame {
+    box-shadow: 0 3px 15px rgb(201, 46, 201);
+}
+
+.event_card {
+    border-color: rgb(7, 201, 0);
+    border-color: 0 1px 10px rgb(7, 201, 0);
+}
+.event_card * .card_frame {
+    box-shadow: 0 3px 15px rgb(7, 201, 0);
+}
+
+.band_card * .card_frame {
+    box-shadow: 0 3px 15px var(--primary);
+}
+
+.card:hover, .card:hover * .card_frame {
+    border: 4px solid var(--accent);
+    box-shadow: none;
 }
 .card img {
     object-fit: cover;
