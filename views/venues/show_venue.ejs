@@ -47,7 +47,9 @@
                     <% for(let i = 0; i < images.alt.length; i++) { %> 
                        <% if ( images.alt[i] ) { %> 
                         <div class="alt-img-container">
-                            <img class="alt-img" src="<%= images.alt[i] %>" alt="a picture of <%= name %> "/>
+                            <a href="<%= images.alt[i] %> " target="_blank">
+                                <img class="alt-img" src="<%= images.alt[i] %>" alt="a picture of <%= name %> "/>
+                            </a>
                         </div>
                         <% } %> 
                     <% } %> 
