@@ -36,8 +36,11 @@ const Events = require('../db/models/eventModel');
     router.put('/:id', (req, res) => {
         const id = req.params.id
         Events.findByIdAndUpdate(id, req.body)
-            .then((event) => res.redirect('/events'))
-            .catch((err) => res.json(err))
+            .then(() => res.redirect('/events'))
+            .catch((err) => { 
+                console.error(err)
+                res.json(err)
+            })
     })
 
 // --- DELETE ---

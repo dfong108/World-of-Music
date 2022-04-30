@@ -154,6 +154,7 @@
 textarea.form__input{
     resize: none;
     min-height: 200px;
+    min-width: 420px;
 }
 
 .form-group .form__input--error, 

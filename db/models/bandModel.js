@@ -1,6 +1,7 @@
 const mongoose = require('../connection');
 // const VenuesSchema = require('./venueModel').schema;
 // const EventSchema = require('./eventModel').schema
+
 const MembersSchema = new mongoose.Schema(
     {
         name: String,

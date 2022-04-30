@@ -6,7 +6,6 @@
     --light:#d8d7d7;
     --black_shadow: 0 1px 5px #292929;
     --color_shadow: 0 1px 10px #e8570e;
-
 }
 
 html {
@@ -93,6 +92,18 @@ body {
     border: 4px outset var(--primary);
 }
 
+.card_inner_container {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    min-height: 400px;
+    max-width: 300px;
+    min-width: 300px;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    position: relative;
+}
+
 .venue_card {
     border-color: rgb(201, 46, 201);
 }
@@ -100,17 +111,32 @@ body {
     border-color: rgb(7, 201, 0);
 }
 
-.card:hover {
+.card:hover, .card:hover * .card_frame {
     border: 4px solid var(--accent);
     box-shadow: none;
 }
 
+.card_frame {
+    height: 250px;
+    width: 250px;
+    margin: 0 auto;
+    /* padding: 4px 4px; */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+    align-self: center;
+    border: 4px outset aliceblue;
+    border-radius: 10px;
+    box-shadow: var(--color_shadow);
+}
 .card img {
     /* background-size: cover; */
-    /* object-fit: cover; */
+    object-fit: cover;
     max-height: 250px;
-    max-width:90%;
-    /* z-index: 0; */
+    /* max-width:90%; */
+
+
 }
 
 .card_name {
@@ -125,21 +151,8 @@ body {
     margin-top: 5rem;
     justify-self: flex-end;
     max-height: 100%;
+    margin: 0 auto;
 }
-
-/* ------- Latesst updates 4/23/22 ------- */
-/* ------- Latesst updates 4/23/22 ------- */
-
-/* .card {
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    padding: 5px;
-} */
-
-
-
-
 
 
 /* ------- MEDIA QUERIES ------- */

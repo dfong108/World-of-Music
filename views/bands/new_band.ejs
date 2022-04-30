@@ -54,33 +54,31 @@
                 <label class="origin" for="orgin.city"></label>
                 <input type="text" class="origin form__input" id="origin.city" name="origin.city" placeholder="City">
                 <span class="form__error">Sample Error Message</span>
-
             </div>
 
         <!-- Members (array) -->
-        
-        <div class="edit-members form-group form-section">
-            <label for="members">Members</label>
+            <div class="edit-members form-group form-section">
+                <label for="members">Members</label>
 
-            <div class="array_container">
-              
-                <div class=" dynamic_input_container">
-                    <input type="text" class="members_input form__input" id="memberName" name="memberName" placeholder="name">
-                    <input type="text" class="members_input form__input" id="membersRole" name="memberRole" placeholder="role">
-                    
-                    <div class="minus_btn">
-                        <i class="fa-solid fa-minus"></i>
-                    </div>
-                    <div class="plus_btn">
-                        <i class="fa-solid fa-plus"></i> 
+                <div class="array_container">
+                
+                    <div class=" dynamic_input_container">
+                        <input type="text" class="members_input form__input" id="memberName" name="memberName" placeholder="name">
+                        <input type="text" class="members_input form__input" id="membersRole" name="memberRole" placeholder="role">
+                        
+                        <div class="minus_btn">
+                            <i class="fa-solid fa-minus"></i>
+                        </div>
+                        <div class="plus_btn">
+                            <i class="fa-solid fa-plus"></i> 
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
 
         <!-- Biography -->
-        <div class="add-description form-group form-section">
+        <div class="edit-description add-description form-group form-section">
             <label for="biography">Bio</label>
             <textarea type="text" class="form__input" id="biography" name="biography" placeholder="Tell us about the band (max 500 chars)." maxlength="500"></textarea>
             <span class="form__error">Sample Error Message</span>
@@ -100,11 +98,9 @@
                     <div class="plus_btn">
                         <i class="fa-solid fa-plus"></i> 
                     </div>
-
                 </div>
             </div>
             <span class="form__error">Sample Error Message</span>
-
         </div>
        
         <!-- Genres (array) -->
@@ -140,5 +136,5 @@
         <input type="submit" class="btn btn-primary"/>
         <a href="/bands" class="btn btn-secondary">Cancel</a>
         
-    </div>
+            </div>
 </form>

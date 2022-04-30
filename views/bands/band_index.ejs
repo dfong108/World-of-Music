@@ -20,30 +20,34 @@
         <% for(let i = 0; i < allBands.length; i++) { %> 
             <div class="band_card card">
                 
-                <a href="/bands/<%= allBands[i]._id %> "> 
-                    
-                    <div class="card_name">
-                        <h3><%= allBands[i].name %></h3>
-                    </div>
-
-                    <% if(allBands[i].images.main) { %> 
-                        <img class="card_img crop" src="<%= allBands[i].images.main%>" alt="a picture of <%= allBands[i].name %>">
-                    <% } else if(! allBands[i].images.main && allBands[i].images.alt[0]) { %>
-                        <img class="card_img crop" src="<%= allBands[i].images.alt[0] %> " alt="a picture of <%= allBands[i].name %>">
-                    <% } else { %>
-                        <img class="card_img crop" src="/assets/livemusic.jpeg" alt="a picture of live music">
-                    <% } %> 
-                </a>
-
-                <div class="card_btns_container">
-                    <a href="/bands/<%= allBands[i]._id %>/edit">
-                        <button class="card_btn btn update_btn">UPDATE</button>
+                <div class="card_inner_container">
+                    <a href="/bands/<%= allBands[i]._id %> "> 
+                        
+                        <div class="card_name">
+                            <h3><%= allBands[i].name %></h3>
+                        </div>
+                        
+                        <div class="card_frame">
+                            <% if(allBands[i].images.main) { %> 
+                                <img class="card_img crop" src="<%= allBands[i].images.main%>" alt="a picture of <%= allBands[i].name %>">
+                            <% } else if(! allBands[i].images.main && allBands[i].images.alt[0]) { %>
+                                <img class="card_img crop" src="<%= allBands[i].images.alt[0] %> " alt="a picture of <%= allBands[i].name %>">
+                            <% } else { %>
+                                <img class="card_img crop" src="/assets/livemusic.jpeg" alt="a picture of live music">
+                            <% } %> 
+                        </div>
                     </a>
-                    <form action="/bands/<%= allBands[i]._id %>?_method=DELETE" method="POST">
-                        <input type="submit" value="DELETE" class="btn card_btn">
-                    </form>
-                </div>
 
+                    <div class="card_btns_container">
+                        <a href="/bands/<%= allBands[i]._id %>/edit">
+                            <button class="card_btn btn update_btn">UPDATE</button>
+                        </a>
+                        <form action="/bands/<%= allBands[i]._id %>?_method=DELETE" method="POST">
+                            <input type="submit" value="DELETE" class="btn card_btn">
+                        </form>
+                    </div>
+                    
+                </div>
             </div>
         <% } %> 
     </div>

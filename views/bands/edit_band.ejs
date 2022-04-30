@@ -56,7 +56,6 @@
                     <label class="origin" for="orgin.city"></label>
                     <input type="text" class="origin form__input" id="origin.city" name="origin.city" value="<%= origin.city %>">
                     <span class="form__error">Sample Error Message</span>
-
                 </div>
 
             <!-- MEMBERS (array) -->
@@ -71,8 +70,8 @@
                             <% if (members[i]) { %> 
 
                                 <div class=" dynamic_input_container">
-                                    <input type="text" class="members_input form__input" id="members.name" name="members" placeholder="name" value="<%= members[i].name %> ">
-                                    <!-- <input type="text" class="members_input form__input" id="members.roles" name="members[0]" placeholder="role"> -->
+                                    <input type="text" class="members_input form__input" id="members.name" name="memberName" placeholder="name" value="<%= members[i].name %> ">
+                                    <input type="text" class="members_input form__input" id="members.roles" name="memberRole" placeholder="role" value="<%= members[i].roles %> ">
                                     
                                     <div class="minus_btn">
                                         <i class="fa-solid fa-minus"></i>
@@ -86,8 +85,8 @@
                         <% } else { %> 
 
                             <div class=" dynamic_input_container">
-                                <input type="text" class="members_input form__input" id="memberName" name="members" placeholder="name">
-                                <!-- <input type="text" class="members_input form__input" id="members.roles" name="members" placeholder="role"> -->
+                                <input type="text" class="members_input form__input" id="memberName" name="memberName" placeholder="name">
+                                <input type="text" class="members_input form__input" id="memberRole" name="memberRole" placeholder="role">
                                 
                                 <div class="minus_btn">
                                     <i class="fa-solid fa-minus"></i>
@@ -223,8 +222,8 @@
                     <label class="genres" for="addImages">Add Images</label>
                     <div class="array_container">
                         <div class=" dynamic_input_container">
-                            <input type="file" class="image_input form__input" id="addImages" name="mainImage">
-                            <input type="url" class="url_input form__input" id="addImages" name="mainImage" placeholder="paste image url">
+                            <!-- <input type="file" class="image_input form__input" id="addImages" name="mainImage"> -->
+                            <input type="text" class="url_input form__input" id="addImages" name="mainImage" placeholder="paste image url">
                         
                             <div class="minus_btn">
                                 <i class="fa-solid fa-minus"></i>

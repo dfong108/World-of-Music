@@ -59,14 +59,51 @@ const Bands = require('../db/models/bandModel');
         const id = req.params.id
         console.log(req.body)
 
-        if (typeof req.body.members === 'string') {
-            // req.body.members = [ { name: req.body.member, roles: [] } ]
-            req.body.members = [ { name: req.body.member, roles: [] } ]
-        }
+        // ----------- Members -----------
 
-        console.log(req.body)
+        function getMembers () {
+
+                class Member {
+                    constructor(name, roles) {
+                        this.name = name;
+                        this.roles = roles;
+                    }
+                }
+                let membersArray = [];
+                let rolesArray = [];
+                let finalArray = [];
+
+                req.body.memberName.forEach((member) => {
+                    membersArray.push(member)
+                })
+                req.body.memberRole.forEach((role) => {
+                    rolesArray.push(role)
+                })
+
+                for (let i = 0; i < membersArray.length; i++) {
+                        let member = new Member(membersArray[i], rolesArray[i])
+                        finalArray.push(member)
+                }
+
+                req.body.members = finalArray
+                return req.body.members
+                // req.body.members = [ { name : "req.body.memberName" ,  roles: [ req.body.memberRole ] } ] 
+            }
+        getMembers();
+                
+
+        // ----------- Images -----------
+
+        // let imgArray = [];
+        console.log(req.body.mainImage)
+        // // req.body.mainImage.forEach((img) => {
+        // //     imgArray.push(img)
+        // // })
+
+        // console.log(imgArray)
+
         Bands.findByIdAndUpdate( id, req.body)
-            .then( console.log())
+            // .then( console.log(req.body))
             .then(() => res.redirect('/bands'))
             .catch((err) => console.log(err))
     })

@@ -8,6 +8,7 @@ require('method-override');
 
 // const mongoose = require('mongoose');
 
+
 const bandRouter = require('./controllers/bandRouter');
 const eventRouter = require('./controllers/eventRouter');
 const venueRouter = require('./controllers/venueRouter');
@@ -25,10 +26,6 @@ const venueRouter = require('./controllers/venueRouter');
         app.use('/events', eventRouter);
         app.use('/venues', venueRouter);
 
-
-app.get('/', (req, res) => {
-    res.send('World of Music App')
-})
 
 
 const port = process.env.PORT || 3000;
