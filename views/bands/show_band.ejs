@@ -48,7 +48,9 @@
                     <div class="show show-section alt-img-section">
                         <% for(let i = 0; i < images.alt.length; i++) { %> 
                             <div class="page-img alt-img-container">
-                                <img class="alt-img" src="<%= images.alt[i] %>" alt="a picture of <%= name %> "/>
+                                <a href="<%= images.alt[i] %> " target="_blank">
+                                    <img class="alt-img" src="<%= images.alt[i] %>" alt="a picture of <%= name %> "/>
+                                </a>
                             </div>
                     <% } %> 
                 </div>
