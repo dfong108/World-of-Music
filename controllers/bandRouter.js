@@ -55,12 +55,29 @@ const Bands = require('../db/models/bandModel');
     })
     router.get('/:id', (req, res) => {
         const id = req.params.id
+        // console.log(req.body)
+        // let mainImage = req.body.images;
+        // let altImageArray = req.body.images
+
+        // console.log(mainImage)
+        // console.log(altImageArray)
+        
         Bands.findById(id)
             .then((band) => {
-                console.log(band)
-                res.render('bands/show_band.ejs', band)
-            })
-    
+
+                // let mainImage = band.images.main;
+                // let altImageArray = band.images.alt
+                // console.log(`main: ---- ${mainImage}`)
+                // console.log(`Alt: ---- ${altImageArray}`)
+                // altImageArray.forEach(img => {
+                //     img.addEventListener('click', (e) => {
+                //         mainImage = e.target
+                //     })
+
+                // })
+            
+            res.render('bands/show_band.ejs', band)
+        })
             .catch((err) => res.json(err))
 
     })

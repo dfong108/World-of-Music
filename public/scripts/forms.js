@@ -22,11 +22,13 @@ const formInputs = Array.from(document.querySelectorAll('.form__input'))
                 
                 if (input.value === "" || input.value === null) {
                     input.classList.add('form__input--error',);
+                } else {
+                    removeAlert();
                 }
             })
         }
 
-        // formRedAlert()
+        formRedAlert()
 
         // form.addEventListener('submit', (e) => {
         //     e.preventDefault();
@@ -64,7 +66,7 @@ function dynamicAdd (x, y) {
 
                     let clone = parent_Container.cloneNode(true)
                     let cloneInputField = clone.querySelectorAll('form__input')
-                    cloneInputField.value = null
+                    cloneInputField.value = " "
 
                     grandparent_Container.appendChild(clone)
                     let new_plus = clone.querySelectorAll('.plus_btn')

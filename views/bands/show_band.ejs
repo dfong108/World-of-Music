@@ -1,5 +1,6 @@
 <head>
     <link rel="stylesheet" href="/styles/show.css">
+    <script src="/scripts/showpage.js"></script>
 </head>
 
 <nav>
@@ -46,7 +47,7 @@
                 <% if (images.alt.length > 0) { %>  
                     <div class="show show-section alt-img-section">
                         <% for(let i = 0; i < images.alt.length; i++) { %> 
-                            <div class="alt-img-container">
+                            <div class="page-img alt-img-container">
                                 <img class="alt-img" src="<%= images.alt[i] %>" alt="a picture of <%= name %> "/>
                             </div>
                     <% } %> 
