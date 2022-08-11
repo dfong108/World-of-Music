@@ -28,9 +28,9 @@ const venueRouter = require('./controllers/venueRouter');
         app.use('/venues', venueRouter);
 
 
-app.get ('https://calendar.google.com/calendar/ical/mopkombqjd0if4hrlhbs03dijo%40group.calendar.google.com/public/basic.ics', (req, res) => {
-        console.log (res.json())
-})
+// app.get ('https://calendar.google.com/calendar/ical/mopkombqjd0if4hrlhbs03dijo%40group.calendar.google.com/public/basic.ics', (req, res) => {
+//         console.log (res.json())
+// })
 
 
 
