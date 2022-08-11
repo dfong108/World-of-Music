@@ -1,12 +1,13 @@
-require('dotenv').config();
 const express = require('express');
+const dotenv = require('dotenv');
+dotenv.config({ path: './config/.env' });
 const app = express();
 const methodOverride = require('method-override');
 const cors = require('cors');
 const expressLayouts = require('express-ejs-layouts')
 require('method-override');
 
-// const mongoose = require('mongoose');
+
 
 
 const bandRouter = require('./controllers/bandRouter');
@@ -22,13 +23,19 @@ const venueRouter = require('./controllers/venueRouter');
         app.use(cors());
         app.use(methodOverride('_method'))
 // ----- Routes -----
-        app.use('/bands', bandRouter);
+        app.use('/', bandRouter);
         app.use('/events', eventRouter);
         app.use('/venues', venueRouter);
 
 
+app.get ('https://calendar.google.com/calendar/ical/mopkombqjd0if4hrlhbs03dijo%40group.calendar.google.com/public/basic.ics', (req, res) => {
+        console.log (res.json())
+})
 
-const port = process.env.PORT || 3000;
+
+
+
+const port = process.env.PORT || 4000;
 app.listen(port, () => {
     console.log(`--- World of Music App running on ${port} ---`)
 })

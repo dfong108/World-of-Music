@@ -32,10 +32,10 @@ console.log(formInputs)
         }
 
     
-        // form.addEventListener('submit', (e) => {
-        //     console.log(e)
-        //     formRedAlert(e)
-        // })
+        form.addEventListener('submit', (e) => {
+            console.log(e)
+            formRedAlert(e)
+        })
 
         
 // ---------------------- DYNAMIC ADD --------------------------
