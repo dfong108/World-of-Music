@@ -23,7 +23,7 @@ const venueRouter = require('./controllers/venueRouter');
         app.use(cors());
         app.use(methodOverride('_method'))
 // ----- Routes -----
-        app.use('/', bandRouter);
+        app.use('/bands', bandRouter);
         app.use('/events', eventRouter);
         app.use('/venues', venueRouter);
 
@@ -35,7 +35,8 @@ const venueRouter = require('./controllers/venueRouter');
 
 
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 4500;
+
 app.listen(port, () => {
     console.log(`--- World of Music App running on ${port} ---`)
 })
