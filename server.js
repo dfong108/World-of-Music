@@ -23,7 +23,7 @@ const venueRouter = require('./controllers/venueRouter');
         app.use(cors());
         app.use(methodOverride('_method'))
 // ----- Routes -----
-        app.use('/bands', bandRouter);
+        app.use('/', bandRouter);
         app.use('/events', eventRouter);
         app.use('/venues', venueRouter);
 
